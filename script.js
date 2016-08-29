@@ -29,7 +29,8 @@
 			// route for the images page
 			.when('/images', {
 				templateUrl : 'pages/images.html',
-				controller  : 'imagesController'
+				controller  : 'imagesController',
+				title:'Images of Siddhu Vydyabhushana'
 			})
 
 			// route for the images page
