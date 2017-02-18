@@ -2,12 +2,13 @@
 	var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
 	// configure our routes
-	scotchApp.config(function($routeProvider) {
-
+	scotchApp.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider) {
+       
+	    $locationProvider.html5Mode(false);
 		$routeProvider
 
 			// route for the home page
-			.when('/', {
+			.when('/home', {
 				templateUrl : 'pages/home.html',
 				controller  : 'mainController',
 				title:'Siddhu Vydyabhushana\'s Creative Portfolio'
@@ -17,13 +18,21 @@
 			.when('/about', {
 				templateUrl : 'pages/about.html',
 				controller  : 'aboutController',
-				title:'About Siddhu Vydyabhushana'
+				title:'Full Stack Web Developer, Hyderabad | India'
 			})
 
 			// route for the contact page
 			.when('/contact', {
 				templateUrl : 'pages/contact.html',
-				controller  : 'contactController'
+				controller  : 'contactController',
+				title:'Get in touch with Siddhu Vydyabhushana'
+			})
+
+			// route for the works page
+			.when('/work', {
+				templateUrl : 'pages/work.html',
+				controller  : 'workController',
+				title:'Portfolio of Siddhu Vydyabhushana'
 			})
 
 			// route for the images page
@@ -40,11 +49,19 @@
 				title:'Siddhu Vydyabhushana\'s Skills'
 			})
 
+			
+			// route for the projects page
+			.when('/projects', {
+				templateUrl : 'pages/projects.html',
+				controller  : 'projectsController',
+				title:'Siddhu Vydyabhushana\'s projects'
+			})
 
+  
 			.otherwise({
-				redirectTo:'/skills'
+				redirectTo:'/about'
 			});
-	});
+	}]);
 
 	
 	scotchApp.controller('imagesController', function($scope) {
@@ -54,63 +71,59 @@
 
 	});
 
-	scotchApp.controller('skillsController', function($scope) {
-		$scope.message = 'Look! I am an about page.';
-		$scope.parentObj.headerSearch=true;
-		$scope.parentObj.header2=true;
-		$scope.parentObj.footer=false;
-		console.log($scope.parentObj.headerSearch);
-
+	scotchApp.controller('skillsController', function($scope,$rootScope) {
+	   var centeredbar = new Nanobar({target: document.body});
+      centeredbar.go(100);
 	});
 
-	scotchApp.controller('aboutController',['$scope','HeaderService',function($scope,HeaderService) {
-		$scope.message = 'Look! I am an about page.';
-		$scope.message = 'Look! I am an about page.';
-		$scope.parentObj.headerSearch=true;
-		$scope.parentObj.header2=true;
-		$scope.parentObj.footer=false;
-		console.log($scope.parentObj.headerSearch);
-		
-		console.log($scope.parentObj.headerSearch+" "+$scope.parentObj.header2+"  "+$scope.parentObj.footer);
+	scotchApp.controller('aboutController',['$scope','HeaderService','menuService',function($scope,$rootScope,HeaderService) {
+		 var centeredbar = new Nanobar({target: document.body});
+      centeredbar.go(100);
+		//console.log($scope.parentObj.headerSearch+" "+$scope.parentObj.header2+"  "+$scope.parentObj.footer);
+		window.addEventListener('scroll',function(){
+			  var pageOffset=window.pageYOffset;
+			  var magic=document.getElementById('imp');
+			  if(pageOffset>150){
+				  	magic.className="imps";
+			  }
+		});
 		
 	}]);
 
-	scotchApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact us! JK. This is just a demo.';
+	scotchApp.controller('contactController', function($scope,$route) {
+	var centeredbar = new Nanobar({target: document.body});
+      centeredbar.go(100);
 	});
 
-	
+	scotchApp.controller('workController', function($scope,$route) {
+	var centeredbar = new Nanobar({target: document.body});
+      centeredbar.go(100);
+	});
 
-	scotchApp.controller('mainController',['$scope','HeaderService',function($scope,HeaderService,$location) {
-		 $scope.selected = '';
-		 $scope.names = ["About", "Education", "Skills", "Hobbies", "Portfolio","Family","Friends"];
+	scotchApp.controller('projects', function($scope,$route) {
+	var centeredbar = new Nanobar({target: document.body});
+      centeredbar.go(100);
+	});
 
-          $scope.sid=function()
-		 {
-		 	   alert("sid");
-		 };
-
-		 
-		 $scope.parentObj=HeaderService.header1();
-		 console.log($scope.parentObj.headerSearch+" "+$scope.parentObj.header2+"  "+$scope.parentObj.footer);
-		 $scope.headerInput="Creative + HardWorking+ Innovative + Developer + Designer + Autodidactic";
-
-		       $scope.routing=function()
-		 {
-		 	   var input=$('.si-input').val();
-               $location.path(input.toLowerCase());
-		 };
-
-		 $scope.checkIfEnterKeyWasPressed = function($event){
-    var keyCode = $event.which || $event.keyCode;
-    if (keyCode === 13) {
-        var input=$('.si-input').val();
-               $location.path(input.toLowerCase());
-    }
-
-  };
-
+	scotchApp.controller('mainController',['$scope','HeaderService',function($scope,HeaderService,$location,menuService) {
 		
+			$scope.openNav=	 function () {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+};
+
+$scope.closeNav=function () {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+		 $scope.selected = '';
+	$scope.classVar="about";
+	$scope.menu=function(menu){
+			$scope.classVar=menu;
+	};
+		 $scope.names = ["About", "Education", "Skills", "Hobbies", "Portfolio","Family","Friends"];
+		
+		 $scope.headerInput="Creative + HardWorking+ Innovative + Developer + Designer + Autodidactic";
 
 	}]);
 
@@ -154,6 +167,18 @@ scotchApp.controller('homeController',['$scope','$controller',function($scope,$l
                 }
             });
     };
+});
+
+scotchApp.factory('menuService',function(){
+	
+  return {
+	  setMenu:function(data){
+		  menu=data;
+	  },
+	  getMenu:function(){
+		  return menu;
+	  }
+  };
 });
 
 scotchApp.factory('HeaderService',function(){
