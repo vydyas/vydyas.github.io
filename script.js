@@ -70,13 +70,10 @@
 	});
 
 	scotchApp.controller('skillsController', function($scope,$rootScope) {
-	   var centeredbar = new Nanobar({target: document.body});
-      centeredbar.go(100);
 	});
 
 	scotchApp.controller('aboutController',['$scope','HeaderService','menuService',function($scope,$rootScope,HeaderService) {
-		 var centeredbar = new Nanobar({target: document.body});
-      centeredbar.go(100);
+		 
 		//console.log($scope.parentObj.headerSearch+" "+$scope.parentObj.header2+"  "+$scope.parentObj.footer);
 		window.addEventListener('scroll',function(){
 			  var pageOffset=window.pageYOffset;
@@ -89,18 +86,12 @@
 	}]);
 
 	scotchApp.controller('contactController', function($scope,$route) {
-	var centeredbar = new Nanobar({target: document.body});
-      centeredbar.go(100);
 	});
 
 	scotchApp.controller('workController', function($scope,$route) {
-	var centeredbar = new Nanobar({target: document.body});
-      centeredbar.go(100);
 	});
 
 	scotchApp.controller('projects', function($scope,$route) {
-	var centeredbar = new Nanobar({target: document.body});
-      centeredbar.go(100);
 	});
 
 	scotchApp.controller('mainController',['$scope','HeaderService',function($scope,HeaderService,$location,menuService) {
