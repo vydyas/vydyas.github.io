@@ -134,7 +134,7 @@ scotchApp.controller('homeController',['$scope','$controller',function($scope,$l
 
     
 	}]);
-	scotchApp.run(['$rootScope', '$route', function($rootScope, $route) {
+	scotchApp.run(['$rootScope', '$route', function($rootScope, $route, $window) {
 	$window.ga('create', 'UA-49262632-1', 'auto');
     $rootScope.$on('$routeChangeSuccess', function() {
         document.title = $route.current.title;
