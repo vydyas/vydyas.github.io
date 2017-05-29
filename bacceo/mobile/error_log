@@ -1,8 +1,0 @@
-[23-Oct-2015 20:13:46 Asia/Calcutta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 8
-[23-Oct-2015 20:13:46 Asia/Calcutta] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 9
-[23-Oct-2015 20:24:08 Asia/Calcutta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 8
-[23-Oct-2015 20:24:08 Asia/Calcutta] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 9
-[07-Nov-2015 14:12:01 Asia/Calcutta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 8
-[07-Nov-2015 14:12:01 Asia/Calcutta] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 9
-[11-Jan-2016 11:32:13 Asia/Calcutta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 8
-[11-Jan-2016 11:32:13 Asia/Calcutta] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/creatr1l/public_html/ayyappagrocery.com/mobile/main.php on line 9
