@@ -144,7 +144,7 @@ li a:hover{
 }
 .about_left_link
 {
-  color:blue;
+  color:#333;
   font-weight:bold;
   font-size: 18px;
   }
@@ -492,6 +492,17 @@ li a:hover{
 .dropdown:hover .dropbtn {
     background-color: #eee;
 }
+        img {
+      /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .5s ease-in-out;
+    }
+
+    img:hover {
+      filter: none;
+      -webkit-filter: grayscale(0);
+    }
   </style>
 </head>
 
