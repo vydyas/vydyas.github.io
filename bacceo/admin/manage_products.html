@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Untitled Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../slidebar/example-styles.css">
+<link rel="stylesheet" type="text/css" href="../slidebar/slidebars.css">
+<link rel="stylesheet" type="text/css" href="../css/adminstyles.css">
+<link rel="stylesheet" type="text/css" href="../css/jqueryui.css">
+<link rel="stylesheet" type="text/css" href="../css/sweetalert.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-editable.css">
+<link rel="stylesheet" type="text/css" href="../css/custombox.min.css">
+<link rel="stylesheet" type="text/css" href="../css/cutomboxmodaldemo.css">
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-toggle-master/bootstrap-toggle-master/css/bootstrap-toggle.min.css">
+
+<script src="../js/jquery-1.11.0.min.js"></script>
+
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.isotope.js"></script>
+<script src="../js/wow.js"></script>
+<script src="../slidebar/slidebars.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/sweetalert.min.js"></script>
+<script src="../js/bootstrap-editable.min.js"></script>
+<script src="../js/custombox.min.js"></script>
+<script src="../js/bootstrap-toggle-master/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+<script src="../js/bootstrap-waitingfor.js"></script>
+<style>
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+  color: #000000 !important;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  color: #FFFFFF;
+  background-color: #e74c3c;
+ 
+}
+.navbar-inverse {
+	background-color:#e74c3c;
+	 margin-bottom:0px !important;
+}
+.navbar-inverse .navbar-brand {
+  color: #E0E0E0;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+  background-color: #c0392b;
+  color: #ffffff;}
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+  color: #FFFFFF;
+}
+.product_data table tr th {
+	text-align:center;
+	}
+</style>
+ 
+<body  style="background-color:#34495e">
+
+<nav class="navbar navbar-inverse Nav_bar_admin" style="border-radius: 0px">
+  
+</nav>
+<div class="page_content">
+	<div class=" container-fluid">
+    	<div class="col-xs-12 col-lg-12 col-sm-12 col-md-12" style="background-color:#FFFFFF">
+        	<div class="row" style="text-align:center">
+            	<h5>View & Manage Your Products</h5>
+                <hr>
+            
+            </div>
+        	<div class="row menu_section_for_view">
+            	<div class="col-xs-12 col-lg-4 col-md-6 col-sm-6">
+                <div class="form-group" style="margin-bottom:0px">
+                	
+                   <select class="form-control super_menu_select super_menu_select_view" id="select">
+                   	  <option selected value="0"> Please Select Menu</option>
+                     
+                   </select>
+                   
+                   
+                </div>
+                </div>
+                <div class="col-xs-12 col-lg-4 col-md-6 col-sm-6">
+                 <div class="form-group" style="margin-bottom:0px">
+                       <select class="form-control main_menu_select main_menu_select_view" id="select">
+                        <option selected value="0"> All Menu</option>
+                          
+                       </select>
+                       
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-4 col-md-6 col-sm-6">
+                <div class="form-group" style="margin-bottom:0px">
+                   <select class="form-control submenu_select submenu_select_view " id="select">
+                      <option value="0">Please Select Sub Menu</option>
+                      
+                      
+                   </select>
+                    
+                </div>
+                </div>
+            
+            </div> <!-- end of row of menu_selection -->
+            <div class="row">
+            	<div class="col-xs-10 col-lg-10 col-md-10 col-sm-10" style="text-align:right">
+					<div style="float:right" class="discount_mode_div">
+                    	<h6>Discount in <input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="info" data-on="%" data-off="RS" class="discount_mode"></h6>
+                    </div>
+                    <div style="float:right; margin-right:20px">
+                    	<h6>EditMode <input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" class="editmode_toggle"></h6>
+                    </div>
+                    
+				</div>
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2">
+                	<button class="btn btn-info print_productsList_btn" style="margin-top:10px"><span class="glyphicon glyphicon-print"> </span></button>
+                </div>
+            	<div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+               
+                 <div class="product_data">
+                 	
+                 
+                 </div>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+        </div><!-- container grid -->	    
+        
+    </div><!-- end container fulied grid -->
+</div>
+
+
+<!-- modals -->
+<div id="loading_popup" class="modal-demo" style="border-radius:0px; background-color:#FFFFFF; opacity:0.9">
+            <div class="text" style="text-align:center; padding:0px">
+               <img src="../imgs/svg-loaders/circles.svg" width="20px">
+               <p style="padding:0px">Proccessing.. Please Wait..</p>
+   			</div> 
+</div>   
+
+<script src="../js/adminscrpits.js"></script>
+<script>
+check_admin_user_session();
+</script>
+<script>
+	
+	
+
+
+$( document ).ajaxStart(function() {
+		waitingDialog.show();
+});
+$(document).ajaxStop(function () {
+  waitingDialog.hide(); 
+  });
+$(document).ready(function(e) {
+	if($(".super_menu_select_view option:selected").val() == 0){
+		$(".editmode_toggle").prop('disabled',true);
+		}
+	
+	
+	if($(".editmode_toggle").is(":checked")){
+	$(".discount_mode_div").show();
+	} else {
+		$(".discount_mode_div").hide();
+		}
+
+	$(".editmode_toggle").change(function(){
+		
+    if($(".editmode_toggle").is(":checked")){
+	$(".discount_mode_div").show();
+		
+		var edit_mode = 1;
+		
+		/*
+		default discount_mode = 1 for percetage and 0 for Price
+		*/
+	if($(".discount_mode").is(":checked")){
+		var discount_mode = 1;
+		}else { 
+		var discount_mode = 0;
+		}	
+		var super_menu_id = $(".super_menu_select_view option:selected").val();
+		var main_menu_id=$(".main_menu_select_view option:selected").val();
+		var submenu_id=$(".submenu_select_view option:selected").val();
+		
+		fetech_product_data(super_menu_id,main_menu_id,submenu_id,edit_mode,discount_mode);
+	} else {
+		$(".discount_mode_div").hide();
+		var edit_mode = 0;
+		
+		/*
+		default discount_mode = 1 for percetage and 0 for Price
+		*/
+	if($(".discount_mode").is(":checked")){
+		var discount_mode = 1;
+		}else { 
+		var discount_mode = 0;
+		}	
+		var super_menu_id = $(".super_menu_select_view option:selected").val();
+		var main_menu_id=$(".main_menu_select_view option:selected").val();
+		var submenu_id=$(".submenu_select_view option:selected").val();
+		
+		fetech_product_data(super_menu_id,main_menu_id,submenu_id,edit_mode,discount_mode);
+		}
+	});
+});  
+$(".discount_mode").change(function(){
+	if($(".discount_mode").is(":checked")){
+		var discount_mode = 1;
+		}else { 
+		var discount_mode = 0;
+		}
+		var edit_mode = 1;	
+		var super_menu_id = $(".super_menu_select_view option:selected").val();
+		var main_menu_id=$(".main_menu_select_view option:selected").val();
+		var submenu_id=$(".submenu_select_view option:selected").val();
+		
+		fetech_product_data(super_menu_id,main_menu_id,submenu_id,edit_mode,discount_mode);
+	});
+$(".print_productsList_btn").click(function(e){
+	e.preventDefault();
+	var super_menu_id = $(".super_menu_select_view option:selected").val();
+		var main_menu_id=$(".main_menu_select_view option:selected").val();
+		var submenu_id=$(".submenu_select_view option:selected").val();
+	//alert(super_menu_id + "," +main_menu_id+ "," +submenu_id);
+	if(super_menu_id ==0){
+		swal("","Please Select SuperMenu atleast to print products");
+		return false;
+		
+		}
+		
+			var url="print_products.php?super_menu_id="+super_menu_id+"&main_menu_id="+main_menu_id+"&submenu_id="+submenu_id;
+			window.open(url,'_blank');
+});
+ 	
+</script>
+</body>
+
+</html>

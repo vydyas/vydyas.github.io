@@ -1,0 +1,32 @@
+/* CSS Document */
+
+.page_content .content_waraper {
+	background-color:#FFFFFF;
+	
+	
+	min-height:200px
+	
+	}
+.vertical-divider{
+    clear: both;
+    position: relative;
+}
+
+.vertical-divider:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.vertical-divider .column:not(:first-child):after, .vertical-divider .columns:not(:first-child):after{
+    background: #DDDDDD;
+    bottom: 0;
+    content: " ";
+    margin-left: -10px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+/* top nav styles */

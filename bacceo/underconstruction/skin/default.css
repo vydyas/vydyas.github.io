@@ -1,0 +1,31 @@
+/* ==============================================================
+
+Template name : Layapan bootstrap flat and responsive landingpage
+Categorie : Landing page
+Author : Nce18cex
+Version : v1.0.0
+Created : 26 August 2013
+Last update : 26 August 2013
+
+================================================================= */
+
+/*
+Color
+================================================== */
+
+a, a:hover, .color{
+	color:#de2824;
+}
+
+/*
+Background color
+================================================== */
+.default-bg, #accent_color{
+	background-color:#de2824;
+}
+
+@media (max-width: 767px) {
+	.wrapper{
+		background-color:#de2824;	
+	}
+}

@@ -1,0 +1,630 @@
+<b>Warning</b>: session_start(): open(/tmp/sess_713a0aff1c7b5d571b23c1a3042ca5b3, O_RDWR) failed: Disk quota exceeded (122) in <b>/home/kameshk/public_html/system/library/session.php</b> on line <b>12</b><b>Warning</b>: session_start(): Cannot send session cookie - headers already sent by (output started at /home/kameshk/public_html/index.php:106) in <b>/home/kameshk/public_html/system/library/session.php</b> on line <b>12</b><b>Warning</b>: session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kameshk/public_html/index.php:106) in <b>/home/kameshk/public_html/system/library/session.php</b> on line <b>12</b><b>Warning</b>: Cannot modify header information - headers already sent by (output started at /home/kameshk/public_html/index.php:106) in <b>/home/kameshk/public_html/index.php</b> on line <b>179</b><b>Warning</b>: Cannot modify header information - headers already sent by (output started at /home/kameshk/public_html/index.php:106) in <b>/home/kameshk/public_html/vqmod/vqcache/vq2-system_library_currency.php</b> on line <b>45</b><b>Warning</b>: fopen(/home/kameshk/public_html/system/cache/cache.language.1433851253): failed to open stream: Disk quota exceeded in <b>/home/kameshk/public_html/system/library/cache.php</b> on line <b>32</b><b>Warning</b>: fwrite() expects parameter 1 to be resource, boolean given in <b>/home/kameshk/public_html/system/library/cache.php</b> on line <b>34</b><b>Warning</b>: fclose() expects parameter 1 to be resource, boolean given in <b>/home/kameshk/public_html/system/library/cache.php</b> on line <b>36</b><!DOCTYPE html>
+<html dir="ltr" class="ltr" lang="en">
+<head>
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+<meta name="viewport" content="width=device-width">
+<meta charset="UTF-8" />
+<title>The page you requested cannot be found!</title>
+<base href="http://www.allinonezone.com/" />
+<link href="http://www.allinonezone.com/image/data/ALL-_LOGO.jpg" rel="icon" />
+<link href="catalog/view/theme/lexus_superstore/stylesheet/bootstrap.css" rel="stylesheet" />
+<link href="catalog/view/theme/lexus_superstore/stylesheet/stylesheet.css" rel="stylesheet" />
+<link href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+<link href="catalog/view/theme/lexus_superstore/stylesheet/animation.css" rel="stylesheet" />
+<link href="catalog/view/theme/lexus_superstore/stylesheet/font-awesome.min.css" rel="stylesheet" />
+<link href="catalog/view/theme/lexus_superstore/stylesheet/pavautosearch.css" rel="stylesheet" />
+<link href="catalog/view/theme/lexus_superstore/stylesheet/pavmegamenu/style.css" rel="stylesheet" />
+
+		
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+<script type="text/javascript" src="catalog/view/theme/lexus_superstore/javascript/common.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/bootstrap/bootstrap.min.js"></script>
+
+
+
+
+
+
+<!--[if lt IE 9]>
+<script src="catalog/view/javascript/html5.js"></script>
+<script src="catalog/view/javascript/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/lexus_superstore/stylesheet/ie8.css" />
+<![endif]-->
+
+
+<link rel="stylesheet" type="text/css" href="irsgroup/ind-font/font.css" />
+<script type="text/javascript" src="irsgroup/ind-font/inr.js"></script>
+</head>
+<body id="offcanvas-container" class="offcanvas-container layout-fullwidth fs12 page-error-not_found ">
+	<section id="page" class="offcanvas-pusher" role="main">
+		<header id="header">
+			<div id="topbar">
+				<div class="container">	
+					<div class="show-desktop hidden-sm hidden-xs">
+						<div class="quick-access pull-left">
+							<div class="login links">Welcome visitor you can <a href="http://www.allinonezone.com/index.php?route=account/login">login</a> or <a href="http://www.allinonezone.com/index.php?route=account/register">create an account</a>.</div>
+						</div>
+						<div class="quick-top-link pull-right">
+							<ul class="links pull-left">								
+								<li><a href="http://www.allinonezone.com/index.php?route=account/wishlist" id="wishlist-total"><i class="fa fa-list-alt"></i>Wish List (0)</a></li>
+								<li><a href="http://www.allinonezone.com/index.php?route=account/account"><i class="fa fa-user"></i>My Account</a></li>
+								<li><a href="http://www.allinonezone.com/index.php?route=checkout/cart"><i class="fa fa-bookmark"></i>Shopping Cart</a></li>
+								<li><a class="last" href="http://www.allinonezone.com/index.php?route=checkout/checkout"><i class="fa fa-share"></i>Checkout</a></li>
+							</ul>	
+
+
+							<!-- Single button -->
+							<div class="btn-group">
+								<button type="button" class="btn dropdown-toggle btn-theme-normal" data-toggle="dropdown">
+									<i class="fa fa-cog"></i>
+									<span class="text-label">Setting</span> 
+									<span class="fa fa-angle-down"></span>									
+								</button>
+								
+								<div class="quick-setting dropdown-menu">
+									<div class="language">
+																			</div>
+									<div class="currency">
+																			</div> 	
+								</div>
+							</div>
+						</div>
+					</div>	
+
+					
+
+					<div class="show-mobile hidden-lg hidden-md">
+
+						<div class="quick-cart pull-left">
+							<div class="quickaccess-toggle">
+								<a href="http://www.allinonezone.com/index.php?route=checkout/cart"><i class="fa fa-shopping-cart"></i></a>	
+							</div>
+						</div>
+						
+						<div class="quick-user pull-left">
+							<div class="quickaccess-toggle">
+								<i class="fa fa-user"></i>
+							</div>
+							<div class="inner-toggle">
+								<div class="login links">
+																		Welcome visitor you can <a href="http://www.allinonezone.com/index.php?route=account/login">login</a> or <a href="http://www.allinonezone.com/index.php?route=account/register">create an account</a>.																	</div>
+							</div>
+						</div>
+
+						<div class="quick-access pull-left">
+							<div class="quickaccess-toggle">
+								<i class="fa fa-tasks"></i>															
+							</div>	
+							<div class="inner-toggle">
+								<ul class="links">									
+									<li><a href="http://www.allinonezone.com/index.php?route=account/wishlist"><i class="fa fa-list-alt"></i>Wish List (0)</a></li>
+									<li><a href="http://www.allinonezone.com/index.php?route=account/account"><i class="fa fa-user"></i>My Account</a></li>
+									<li><a class="last" href="http://www.allinonezone.com/index.php?route=checkout/checkout"><i class="fa fa-share"></i>Checkout</a></li>
+								</ul>								
+							</div>						
+						</div>											
+
+						<div class="support pull-left">
+							<div class="quickaccess-toggle">
+								<i class="fa fa-sun-o"></i>								
+							</div>						
+							<div class="inner-toggle quick-setting">
+								<div class="language">
+																	</div>
+								<div class="currency">
+																	</div>
+							</div>															
+						</div>
+
+
+					</div>
+
+
+				</div>
+			</div>
+
+			<div id="header-main">	
+				<div class="row">
+					<div class="container">
+						<div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 logo inner">
+														<div id="logo-theme" class="logo-store" >
+								<a href="http://www.allinonezone.com/index.php?route=common/home">
+									<img src="http://www.allinonezone.com/image/data/ALL-_LOGO.jpg" title="All in One Zone" alt="All in One Zone" />
+								</a>
+							</div>
+							 
+						</div>
+
+						<div id="search" class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+							<div class="input-group">
+																	<div class=" box search_box">
+	<form method="GET" action="index.php">
+		<div class="filter_type category_filter pull-left">
+		<span class="fa fa-caret-down"></span>
+		<select name="category_id">
+			<option value="0">All Category</option>
+									<option value="74">Grocery</option>
+												<option value="87">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baby Care</option>
+												<option value="117">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Baby Creams &amp; Lotions</option>
+												<option value="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baby Diapers &amp; wipes</option>
+												<option value="118">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baby Oils &amp; Shampoo</option>
+												<option value="119">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baby Powder</option>
+															<option value="85">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cleaning Agents</option>
+												<option value="167">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Air Freshers</option>
+												<option value="169">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Car Care</option>
+												<option value="170">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cleaning Accessories</option>
+												<option value="166">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detergents</option>
+												<option value="163">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dish Washing</option>
+												<option value="155">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hand Wash </option>
+												<option value="165">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Household Cleaners</option>
+												<option value="168">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shoe Care</option>
+												<option value="164">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toilet Cleaning</option>
+															<option value="83">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Health Care</option>
+												<option value="173">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balm</option>
+												<option value="172">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bandages</option>
+												<option value="171">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dettol</option>
+												<option value="174">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inhaler</option>
+															<option value="122">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kitchen</option>
+												<option value="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dals &amp; Pulses</option>
+												<option value="77">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edible oils &amp; Ghee</option>
+												<option value="80">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flours &amp; Saoji</option>
+												<option value="78">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rice </option>
+												<option value="81">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salt,Sugar &amp; Jaggery</option>
+															<option value="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Milk &amp; Diary Products</option>
+															<option value="88">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others</option>
+															<option value="82">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Care</option>
+												<option value="144">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dental Care</option>
+												<option value="121">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hair Care</option>
+												<option value="157">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shaving Needs</option>
+												<option value="129">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skin Care</option>
+															<option value="86">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pooja Accessories</option>
+															<option value="84">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stationery</option>
+																		<option value="98">Kids World</option>
+															<option value="71">Electronics</option>
+												<option value="136">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cameras</option>
+															<option value="96">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computer Components</option>
+												<option value="114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cabinets</option>
+												<option value="115">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DVD Drives and Writers</option>
+												<option value="112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;External HDD</option>
+												<option value="113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Internal HDD</option>
+												<option value="99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keyboards</option>
+												<option value="116">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monitors</option>
+												<option value="101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mouse</option>
+												<option value="90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Printer</option>
+												<option value="110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processors</option>
+												<option value="111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAM</option>
+												<option value="100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Speakers</option>
+															<option value="139">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desktops Computers</option>
+															<option value="106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laptops</option>
+												<option value="108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dell</option>
+												<option value="109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HP</option>
+												<option value="107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sony</option>
+															<option value="94">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile accessories</option>
+												<option value="134">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HeadSets &amp; Ear Phones</option>
+												<option value="132">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory cards</option>
+												<option value="104">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile Cases</option>
+												<option value="137">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others</option>
+												<option value="135">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Power Banks</option>
+												<option value="133">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screen Guards</option>
+															<option value="72">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobiles</option>
+												<option value="91">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;htc</option>
+												<option value="93">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LG</option>
+												<option value="103">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Micromax</option>
+												<option value="102">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Motorola</option>
+												<option value="92">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Samsung</option>
+												<option value="73">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SONY</option>
+															<option value="97">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tablets</option>
+												<option value="105">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lenovo</option>
+														</select>
+	</div>
+		<div id="search1" class="search pull-left">
+		<input type="text" name="search" autocomplete="off" placeholder="Search.." value="" class="input-search form-control">
+		<span class="button-search fa fa-search"></span>
+	</div>
+	<input type="hidden" name="sub_category" value="1" id="sub_category"/>
+	<input type="hidden" name="route" value="product/search"/>
+	<input type="hidden" name="description" value="true" id="description"/>
+	</form>
+	<div class="clear clr"></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#search span:first").mouseover(function(){
+		var $this = $(this);
+		var $input = $(".category_filter select[name=\"category_id\"]"); 
+		if ($input.is("select") && !$('.lfClon').length) {
+			var $clon = $input.clone();
+			var getRules = function($ele){ return {
+				position: 'absolute',
+				left: $ele.offset().left,
+				top: $ele.offset().top,
+				width: $ele.outerWidth(),
+				height: $ele.outerHeight(),
+				background: '#f9f9f9',
+				fontSize: '13px',
+				color: '#8c8c8c',
+				opacity: 0,
+				margin: 0,
+				padding: 0
+			};};
+			var rules = getRules($input);
+			$clon.css(rules);
+			$clon.on("mousedown.lf", function(){
+				$clon.css({
+					marginLeft: $input.offset().left - rules.left,
+					marginTop: $input.offset().top - rules.top,
+				});
+				$clon.on('change blur', function(){
+					$input.val($clon.val()).show();
+					$clon.remove();
+				});
+				$clon.off('.lf');
+			});
+			$clon.on("mouseout.lf", function(){
+				$(this).remove();
+			});
+			$clon.prop({id:'',className:'lfClon'});
+			$clon.appendTo('body');
+		}
+	});
+
+	var selector = '#search1';
+	var text_price = "Price";
+	var total = 0;
+	var show_image = true;
+	var show_price = true;
+	var search_sub_category = true;
+	var search_description = true;
+
+	$(selector).find('input[name=\'search\']').autocomplete({
+		delay: 500,
+		source: function(request, response) {
+			var category_id = $(".category_filter select[name=\"category_id\"]").first().val();
+			if(typeof(category_id) == 'undefined')
+				category_id = 0;
+			var limit = 5;
+			var search_sub_category = search_sub_category?'&sub_category=true':'';
+			var search_description = search_description?'&description=true':'';
+			$.ajax({
+				url: 'index.php?route=module/pavautosearch/autocomplete&filter_category_id='+category_id+'&limit='+limit+search_sub_category+search_description+'&filter_name='+encodeURIComponent(request.term),
+				dataType: 'json',
+				success: function(json) {		
+					response($.map(json, function(item) {
+						if($('.pavautosearch_result')){
+							$('.pavautosearch_result').first().html("");
+						}
+						total = 0;
+						if(item.total){
+							total = item.total;
+						}
+						return {
+							price: item.price,
+							label: item.name,
+							image: item.image,
+							link:  item.link,
+							value: item.product_id
+						}
+					}));
+				}
+			});
+		},
+		select: function(event, ui) {
+			return false;
+		},
+		focus: function(event, ui) {
+			return false;
+		}
+	})
+		$(selector).find('input[name=\'search\']').data( "autocomplete" )._renderMenu = function(ul,b){
+			var g=this;
+			$.each(b,function(c,f){g._renderItem(ul,f)});
+			var category_id = $(".category_filter select[name=\"category_id\"]").first().val();
+			category_id = parseInt(category_id);
+			var text_view_all = 'View all %s items';
+			text_view_all = text_view_all.replace(/%s/gi, total);
+			return $(ul).append('<li><a href="index.php?route=product/search&search='+g.term+'&category_id='+category_id+'&sub_category=true&description=true" onclick="window.location=this.href">'+text_view_all+'</a></li>');
+		};
+		$(selector).find('input[name=\'search\']').data( "autocomplete" )._renderItem = function( ul, item ) {
+			var html = '';
+			if(show_image){
+				html += '<img class="pull-left" style="margin-right:10px;" src="'+item.image+'">';
+			}
+			html += '<div class="name">'+item.label+'</div>';
+			if(show_price){
+				var text_price = "";
+				if (item.price) {
+					text_price += '<div class="price">';
+					if (!item.special) {
+					 text_price += item.price;
+					} else {
+					 text_price += '  <span class="price-old">'+item.price+'</span> <span class="price-new">'+item.special+'</span>';
+					}
+					if (item.tax) {
+						item.text_price += '<br />';
+						item.text_price += '<span class="price-tax">text_tax '+item.tax+'</span>';
+					}
+					text_price += '</div>';
+				}
+				html += '<div class="price">'+item.price;	
+			}
+			
+			html += '</div><br class="clear clr"/>';
+			var li_element = $("<li></li>").data("item.autocomplete",item).append(html).appendTo(ul);
+			
+			$(li_element).click(function(el){
+				$(selector+' input[name=\'search\']').val('');
+				if(item.link){
+					window.location = item.link.replace(/&amp;/gi,'&');
+				}
+			});
+			
+			return li_element;
+		};
+})
+</script>															</div>						
+						</div>					
+
+						<div class="col-lg-2 col-md-2 shopping-cart inner hidden-xs hidden-sm">
+							<div class="cart-top">
+								<div id="cart" class="clearfix btn-group">
+	<div class="heading media">		
+		<div class="pull-left">
+			<i class="icon-cart fa fa-shopping-cart"></i>
+		</div>
+		<div class="cart-inner media-body">
+			<h4>Shopping Cart</h4>
+			<a><span id="cart-total">0 item(s) - <span class='WebRupee'>Rs</span>0</span><i class="fa fa-angle-down"></i></a>
+		</div>
+	</div>
+	
+	<div class="content dropdown-menu">
+				<div class="empty">Your shopping cart is empty!</div>
+			</div>  
+</div>							</div>
+						</div>	
+					</div>
+				</div>
+			</div>	
+
+			<div class="custom-menu">
+		<div id="pav-mainnav">			
+			<div class="container">
+			
+								<div class="pav-megamenu">
+	<div class="navbar navbar-default">
+		<div id="mainmenutop" class="megamenu" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-toggle hidden-lg hidden-md" href="javascript:;" data-target=".navbar-collapse" data-toggle="collapse">
+		        	<span class="fa fa-bars"></span>		        
+		     	</a>
+				<div class="collapse navbar-collapse navbar-ex1-collapse hidden-sm hidden-xs">
+					<ul class="nav navbar-nav megamenu"><li class="" >
+					<a href="?route=common/home"><span class="menu-title">Home</span></a></li><li class="parent dropdown " >
+					<a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/electronics"><span class="menu-title">Electronics</span><b class="caret"></b></a><div class="dropdown-menu level1"  style="width:600px" ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-5" data-type="menu" ><div class="mega-col-inner"><ul><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/electronics"><span class="menu-title">Tablets</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=97_105"><span class="menu-title">Lenovo</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/electronics"><span class="menu-title">Mobiles</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=72_103"><span class="menu-title">Micromax</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=72_91"><span class="menu-title">htc</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=72_92"><span class="menu-title">Samsung</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=72_93"><span class="menu-title">LG</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=72_73"><span class="menu-title">SONY</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=72_102"><span class="menu-title">Motorola</span></a></li></ul></div></div></div></div></div></li><li class=" " ><a href="http://www.allinonezone.com/electronics/Computer-Components"><span class="menu-title">Cameras</span></a></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/electronics"><span class="menu-title">Mobile accessories</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=94_134"><span class="menu-title">HeadSets &amp; Ear Phones</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=94_104"><span class="menu-title">Mobile Cases</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=94_135"><span class="menu-title">Power Banks</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=94_137"><span class="menu-title">Others</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=94_132"><span class="menu-title">Memory cards</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=94_133"><span class="menu-title">Screen Guards</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/electronics"><span class="menu-title">Laptops</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=106_107"><span class="menu-title">Sony</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=106_108"><span class="menu-title">Dell</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=106_109"><span class="menu-title">HP</span></a></li></ul></div></div></div></div></div></li><li class=" " ><a href="http://www.allinonezone.com/electronics"><span class="menu-title">Desktops Computers</span></a></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/electronics/Computer-Components"><span class="menu-title">Computer Components</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/Computer-Components/ram"><span class="menu-title">RAM</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Printer</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">External HDD</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Internal HDD</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Keyboards</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Cabinets</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Speakers</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">DVD Drives and Writers</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Mouse</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Monitors</span></a></li><li class=" " ><a href="http://www.allinonezone.com/Computer-Components"><span class="menu-title">Processors</span></a></li></ul></div></div></div></div></div></li></ul></div></div></div></div></div></li><li class="parent dropdown " >
+					<a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74"><span class="menu-title">Grocery</span><b class="caret"></b></a><div class="dropdown-menu level1"  style="width:600px" ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-4" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_84"><span class="menu-title">Stationery</span></a></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_85"><span class="menu-title">Cleaning Agents</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_155"><span class="menu-title">Hand Wash </span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_164"><span class="menu-title">Toilet Cleaning</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_166"><span class="menu-title">Detergents</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_167"><span class="menu-title">Air Freshers</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_163"><span class="menu-title">Dish Washing</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_168"><span class="menu-title">Shoe Care</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_165"><span class="menu-title">Household Cleaners</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_169"><span class="menu-title">Car Care</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=85_170"><span class="menu-title">Cleaning Accessories</span></a></li></ul></div></div></div></div></div></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_86"><span class="menu-title">Pooja Accessories</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_79"><span class="menu-title">Milk &amp; Diary Products</span></a></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_87"><span class="menu-title">Baby Care</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=87_118"><span class="menu-title">Baby Oils &amp; Shampoo</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=87_119"><span class="menu-title">Baby Powder</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=87_120"><span class="menu-title">Baby Diapers &amp; wipes</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=87_117"><span class="menu-title"> Baby Creams &amp; Lotions</span></a></li></ul></div></div></div></div></div></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_88"><span class="menu-title">Others</span></a></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_83"><span class="menu-title">Health Care</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=83_171"><span class="menu-title">Dettol</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=83_172"><span class="menu-title">Bandages</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=83_173"><span class="menu-title">Balm</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=83_174"><span class="menu-title">Inhaler</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_122"><span class="menu-title">Kitchen</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=122_76"><span class="menu-title">Dals &amp; Pulses</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=122_77"><span class="menu-title">Edible oils &amp; Ghee</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=122_78"><span class="menu-title">Rice </span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=122_80"><span class="menu-title">Flours &amp; Saoji</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=122_81"><span class="menu-title">Salt,Sugar &amp; Jaggery</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=74_82"><span class="menu-title">Personal Care</span><b class="caret"></b></a><div class="dropdown-menu level2"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=82_121"><span class="menu-title">Hair Care</span><b class="caret"></b></a><div class="dropdown-menu level3"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=121_127"><span class="menu-title">Hair Cream</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=121_123"><span class="menu-title">Hair Colors &amp; Dyes</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=121_128"><span class="menu-title">Shampoo</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=121_125"><span class="menu-title">Hair Conditioner</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=121_124"><span class="menu-title">Hair Oil</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=121_126"><span class="menu-title">Hair Gel</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=82_129"><span class="menu-title">Skin Care</span><b class="caret"></b></a><div class="dropdown-menu level3"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_140"><span class="menu-title">Face Wash</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_162"><span class="menu-title">Bath Soaps</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_141"><span class="menu-title">Face Pack</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_142"><span class="menu-title">Lip Balm</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_130"><span class="menu-title">Face Cream</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_143"><span class="menu-title">Kajal</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_131"><span class="menu-title">Face Scrub</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_175"><span class="menu-title">Vaseline</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_138"><span class="menu-title">Cold Cream</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=129_154"><span class="menu-title">Ear Buds</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=82_157"><span class="menu-title">Shaving Needs</span><b class="caret"></b></a><div class="dropdown-menu level3"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=157_161"><span class="menu-title">Shaving Brush</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=157_158"><span class="menu-title">Shaving Cream, Foam &amp; Gel</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=157_159"><span class="menu-title">Shaving Blade &amp; Razors</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=157_160"><span class="menu-title">After Shave Lotion</span></a></li></ul></div></div></div></div></div></li><li class="parent dropdown-submenu " ><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.allinonezone.com/index.php?route=product/category&amp;path=82_144"><span class="menu-title">Dental Care</span><b class="caret"></b></a><div class="dropdown-menu level3"  ><div class="dropdown-menu-inner"><div class="row"><div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu" ><div class="mega-col-inner"><ul><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=144_146"><span class="menu-title">Tooth Powder</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=144_147"><span class="menu-title">Tooth Paste</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=144_148"><span class="menu-title">Mouth Wash</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=144_149"><span class="menu-title">Tooth Picks</span></a></li><li class=" " ><a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=144_145"><span class="menu-title">Tooth Brush</span></a></li></ul></div></div></div></div></div></li></ul></div></div></div></div></div></li></ul></div></div></div></div></div></li><li class="" >
+					<a href="http://www.allinonezone.com/index.php?route=product/category&amp;path=98"><span class="menu-title">Kids World</span></a></li></ul>				</div>
+			</div>
+		</div>
+	</div>
+</div>				
+								</div>					
+			</div>
+			</div>
+
+								
+		</header>
+
+		
+		
+
+
+
+<!--/**
+* sys-notification
+*/-->
+
+<section id="sys-notification">
+	<div class="container">
+				<div id="notification"></div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="columns" class="offcanvas-siderbars">
+<div class="row visible-xs"><div class="container"> 
+	<div class="offcanvas-sidebars-buttons">
+		<button type="button" data-for="column-left" class="pull-left btn btn-danger btn-theme-default"><i class="fa fa-sort-amount-asc"></i> Sidebar Left</button>
+		
+		<button type="button" data-for="column-right" class="pull-right btn btn-danger btn-theme-default">Sidebar Right <i class="fa fa-sort-amount-desc"></i></button>
+	</div>
+</div></div>
+	<div id="breadcrumb"><ol class="breadcrumb container">
+		<li><a href="http://www.allinonezone.com/index.php?route=common/home"><span>Home</span></a></li>
+		<li><a href="http://www.allinonezone.com/index.php?route=error/not_found"><span>The page you requested cannot be found!</span></a></li>
+	</ol></div>  
+
+<div class="container">
+<div class="row">
+
+	 
+	
+	<section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div id="content">
+						<h1>The page you requested cannot be found!</h1>
+
+
+			<div class="content page-not-found wrapper">				
+				<p>The page you requested cannot be found.</p>
+			</div>
+
+
+			<div class="buttons">
+				<div class="right"><a href="http://www.allinonezone.com/index.php?route=common/home" class="button btn btn-theme-default">Continue</a></div>
+			</div>
+					</div>
+	</section> 
+	
+	
+</div></div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="footer">
+		<div class="footer-center">
+		<div class="container">
+			<div class="row">			
+					
+						<div class="column col-xs-12 col-sm-6 col-lg-3 col-md-3">
+				<div class="box info">
+					<div class="box-heading"><span>Information</span></div>
+					<div class="box-content">
+						<ul class="list">
+						  						  <li><a href="http://www.allinonezone.com/about_us"><i class="fa fa-stop"></i>About Us</a></li>
+						  						  <li><a href="http://www.allinonezone.com/index.php?route=information/information&amp;information_id=6"><i class="fa fa-stop"></i>Delivery Information</a></li>
+						  						  <li><a href="http://www.allinonezone.com/index.php?route=information/information&amp;information_id=3"><i class="fa fa-stop"></i>Privacy Policy</a></li>
+						  						  <li><a href="http://www.allinonezone.com/index.php?route=information/information&amp;information_id=5"><i class="fa fa-stop"></i>Terms &amp; Conditions</a></li>
+						  						</ul>
+					</div>					
+				</div>
+			</div>
+							
+		  
+			<div class="column col-xs-12 col-sm-6 col-lg-3 col-md-3">
+				<div class="box extra">
+					<div class="box-heading"><span></i>Extras</span></div>
+					<div class="box-content">
+						<ul class="list">							
+							<li><a href="http://www.allinonezone.com/index.php?route=product/manufacturer"><i class="fa fa-stop"></i>Brands</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=account/voucher"><i class="fa fa-stop"></i>Gift Vouchers</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=affiliate/account"><i class="fa fa-stop"></i>Affiliates</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=product/special"><i class="fa fa-stop"></i>Specials</a></li>
+						</ul>
+					</div>			
+				</div>
+			</div>
+
+			<div class="column col-xs-12 col-sm-6 col-lg-3 col-md-3">
+				<div class="box">
+					<div class="box-heading"><span>My Account</span></div>
+					<div class="box-content">
+						<ul class="list">						  
+							<li><a href="http://www.allinonezone.com/index.php?route=account/account"><i class="fa fa-stop"></i>My Account</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=account/order"><i class="fa fa-stop"></i>Order History</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=account/wishlist"><i class="fa fa-stop"></i>Wish List</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=account/newsletter"><i class="fa fa-stop"></i>Newsletter</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column col-xs-12 col-sm-6 col-lg-3 col-md-3">
+				<div class="box customer-service">
+					<div class="box-heading"><span>Customer Service</span></div>
+					<div class="box-content">
+						<ul class="list">						  
+							<li><a href="http://www.allinonezone.com/index.php?route=information/contact"><i class="fa fa-stop"></i>Contact Us</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=account/return/insert"><i class="fa fa-stop"></i>Returns</a></li>
+							<li><a href="http://www.allinonezone.com/index.php?route=information/sitemap"><i class="fa fa-stop"></i>Site Map</a></li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+		 </div> 
+	</div></div>
+	
+
+
+	
+
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+<div id="powered">
+	<div class="container">
+		<div id="top"><a class="scrollup" href="#"><i class="fa fa-angle-up"></i>Top</a></div>
+		<div class="copyright pull-left">
+					Copyright 2014 Allinonezone.Com.				Designed by <a href="http://www.themelexus.com" title="themelexus - opencart themes clubs" target="_blank">ThemeLexus</a>
+		</div>	
+					<div class="paypal pull-right">
+				<p><img alt="" src="image/data/paypal.png" /></p>
+		</div>
+		 	</div>
+</div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("li:first-child").addClass('first');
+		$("li:last-child").addClass('last');	
+		$(".box-product .row:last-child").addClass('last');				
+		$("#image-additional a:last-child").addClass('last');
+		$(".product-items:last-child").addClass('last');
+		$('.product-cols:last-child').addClass('last');	
+		$(".product-cols:first-child").addClass('first');		
+		$(".product-grid div[class^='col-']:last-child").addClass('last');
+		$(".product-grid .row:last-child").addClass('last');
+		$(function(){
+			$('#header .links li').last().addClass('last');
+			$('.breadcrumb a').last().addClass('last');
+			$('.cart tr').eq(0).addClass('first');																									  
+		});								
+	});
+</script>
+</section> 
+</body></html><br />
+<b>Fatal error</b>:  Call to a member function get() on a non-object in <b>/home/kameshk/public_html/index.php</b> on line <b>105</b><br />

@@ -1,0 +1,3 @@
+$(function() {
+	$( '#mi-slider' ).catslider();
+});

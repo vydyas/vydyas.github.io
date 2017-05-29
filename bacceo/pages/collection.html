@@ -1,0 +1,50 @@
+<div class="header_filters">
+<ul style="text-align:center">
+	<li class="pavan">Size <img src="img/down.png" width="13px">
+	<ul class="pavans">
+      <li><input type="checkbox" value="s">S</li>
+      <li><input type="checkbox" value="s">X</li>
+      <li><input type="checkbox" value="s">XL</li>
+      <li><input type="checkbox" value="s">XXL</li>
+      <li><input type="checkbox" value="s">XXXL</li>
+    </ul>
+	</li>
+	<li>Color <img src="img/down.png" width="13px"></li>
+	<li>Brands <img src="img/down.png" width="13px"></li>
+	<li>Sort <img src="img/down.png" width="13px"></li>
+</ul>
+</div>
+	
+			<!-- Start row1 -->
+			<div class="row">
+			<div class="col-lg-2">
+			<div class=" siddhupadding">
+					<div>
+					<a href="#/product/{{collection.id}}"><img src="img/adv.png" class="img-responsive" style="width: 198px;" alt="">
+					</div>
+			</div>						
+			</div>
+			<div class="col-lg-10">
+
+			<div class="col-lg-3 wrapper-bg bg1 aligncenter siddhupadding" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" ng-repeat="collection in collections">
+					<a href="#" class="buy"><span>Buy it</span></a>
+					<span class="product-label" style="background:transparent">
+ 						<my-component src="like.svg" data="collection"></my-component>
+					</span>
+					<div>
+					<a href="#/product/{{collection.id}}"><img src="{{collection.url}}" class="img-responsive" alt=""><>
+					</div>
+					<div class="product-title">
+					<h5>
+					<a href="#/product/{{collection.id}}">{{collection.name}}</a></h5>
+						<span>{{collection.price}}</span>
+					</div>
+					<div class="product-title-mobile">
+					<p class="truncate">Product name</p>
+						<span>$50.00</span>
+					</div>
+			</div>						
+			</div>
+			
+			</div>					
+</body>

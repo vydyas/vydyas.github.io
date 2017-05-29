@@ -1,0 +1,5 @@
+		$('.slidyContainer').slidy({
+		});
+
+		$('.accordion').accordy({
+		});

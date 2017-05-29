@@ -1,0 +1,97 @@
+/*
+* © 2011 D MALAM
+* MIT License
+* Responsly.js Accordly CSS Styling
+* Edit as needed
+*/
+
+/* 1 second for the transitions */
+.accordion .pointer, .accordion article, .accordion section hgroup {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.accordion {
+	margin: 2em 0;
+}
+
+.accordion section {
+	overflow:hidden;
+}
+
+.accordion section:first-child hgroup{
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -moz-border-radius-topleft: 0.5em;
+  -moz-border-radius-topright: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.accordion section:last-child:not(.accordion_current) hgroup{
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius-bottomright: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+}
+
+/* Change the color below for the unselected section */
+.accordion section hgroup {
+	background-color:#C7430D;
+	margin:0;
+	padding: 4px 2px;
+	cursor: pointer;
+	color: #444;
+}
+
+.accordion section hgroup h3, .accordion section hgroup h4 {
+  display: inline;
+  margin-left: 2em;
+
+}
+
+/* Change the color below for currently selected section */
+.accordion section.accordion_current hgroup {
+	background-color:#B02B14;
+	color: #000;
+}
+
+.accordion .pointer {
+	margin-left:4px;
+	margin-right:4px;
+	line-height:1.2em;
+	color: #C1C4C4;
+	font-size: 1.5em;
+	position: absolute;
+}
+
+.accordion section.accordion_current hgroup .pointer {
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+
+.accordion article {
+  display: block;
+  height: 0;
+  margin: auto;
+  padding: 0;
+  overflow:hidden;
+  opacity: 0;
+}
+
+.accordion section.accordion_current article{
+  /*height: 495px;*/
+  height: 100%;  /* There is a bug in mozilla/webkit which stops the transition when using a relative height */
+  opacity: 1;
+}
+
+}

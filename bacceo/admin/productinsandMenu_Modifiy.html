@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/animate.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../slidebar/example-styles.css">
+<link rel="stylesheet" type="text/css" href="../slidebar/slidebars.css">
+<link rel="stylesheet" type="text/css" href="../css/adminstyles.css">
+<link rel="stylesheet" type="text/css" href="../css/jqueryui.css">
+<link rel="stylesheet" type="text/css" href="../css/sweetalert.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-editable.css">
+<link rel="stylesheet" type="text/css" href="../css/custombox.min.css">
+<link rel="stylesheet" type="text/css" href="../css/cutomboxmodaldemo.css">
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-toggle-master/bootstrap-toggle-master/css/bootstrap-toggle.min.css">
+<script src="../js/jquery-1.11.0.min.js"></script>
+
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.isotope.js"></script>
+<script src="../js/wow.js"></script>
+<script src="../slidebar/slidebars.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/sweetalert.min.js"></script>
+<script src="../js/bootstrap-editable.min.js"></script>
+<script src="../js/custombox.min.js"></script>
+<script src="../js/bootstrap-toggle-master/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+<script src="../js/bootstrap-waitingfor.js"></script>
+<style>
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+  color: #000000 !important;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  color: #FFFFFF;
+  background-color: #e74c3c;
+ 
+}
+.navbar-inverse {
+	background-color:#e74c3c;
+	 margin-bottom:0px !important;
+}
+.navbar-inverse .navbar-brand {
+  color: #E0E0E0;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+  background-color: #c0392b;
+  color: #ffffff;}
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+  color: #FFFFFF;
+}
+</style>
+ 
+<body  style="background-color:#34495e">
+
+<nav class="navbar navbar-inverse Nav_bar_admin" style="border-radius: 0px">
+  
+</nav>
+<div class="page_content">
+	<div class="container">
+    		    <div class="content_waraper col-xs-12 col-lg-6 col-md-6 col-sm-6 product_adding_wraper">
+           <div class="product_add_form_container" style="text-align:center">
+           		<h5>Product Adding</h5>
+                <hr>
+                <form style="text-align:left" class="product_adding_form">
+                <div class="form-group">
+                   <input class="form-control input-sm product_name " type="text" type="text" placeholder="Product Name" >
+                </div>
+                <div class="form-group">
+                   <input class="form-control input-sm small_desc" type="text"placeholder="Small Descrption" >
+                </div>
+                <div class="form-group">
+                   <input class="form-control input-sm p_qty" type="text" placeholder="Qunatity of the Product" >
+                </div>
+                <div class="form-group" style="margin-bottom:0px">
+                	
+                   <select class="form-control super_menu_select" id="select">
+                   	  <option selected> Please Select Menu</option>
+                     
+                   </select>
+                   
+                   
+                </div>
+                
+                	
+                    <div class="form-group" style="margin-bottom:0px">
+                       <select class="form-control main_menu_select" id="select">
+                        <option selected value="0"> Please Select Main Menu</option>
+                          
+                       </select>
+                       
+                    </div>
+                
+                <div class="form-group" style="margin-bottom:0px">
+                   <select class="form-control submenu_select " id="select">
+                      <option value="0">Please Select Sub Menu</option>
+                      
+                      
+                   </select>
+                    
+                </div>
+                
+                <div class="form-group">
+                   <input class="form-control input-sm mrp_price" type="text"placeholder="MRP" >
+                </div>
+                <div class="discount_mode_div">
+                    	<h6>Discount in <input type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="info" data-on="%" data-off="RS" class="discount_mode_insert" data-discountmode="0"></h6>
+                    </div>
+                <div class="form-group discount_in_percentage">
+                
+                   <input class="form-control input-sm d_price d_price_in_percent" type="text" placeholder="Discount in (%)" >
+                </div>
+                <div class="form-group discount_in_price">
+                
+                   <input class="form-control input-sm d_price d_price_in_price" type="text" placeholder="Discount in RS" >
+                </div>
+                <div class="form-group">
+                
+                   <input class="form-control input-sm in_stock" type="text" placeholder="In Stock" >
+                </div>
+                <div class="form-group">
+                   <input class="product_image_input"  type="File" >
+                </div>
+                <div class="row">
+                
+                <div class="img-rounded image_check" style="width:90px; height:90px; float:left; background-color:#AAAAAA; margin:2px 10px 10px 15px">
+                </div>
+                <p> This is for Preview Purpose Only </p>
+                <div class="finalprice_label" style=" height:40px; background-color:#FF7E00; position:absolute; right:100px; border-radius:10px; text-align:center; padding:5px 5px">
+                <span style="color:#FFFFFF; font-size:20px; " class="final_priceval">Rs.0/-</span>
+                
+                </div>
+                </div>
+                <div class="row" style="margin:auto; text-align:center; margin-bottom:20px">
+                	<button class="btn btn-success add_product_btn">ADD</button>
+                    <button class="btn btn-danger reset_form_btn">Cancel</button>
+                </div>
+                </form>
+           </div>
+        
+        </div>
+           <div class="content_waraper col-xs-12 col-lg-6 col-md-6 col-sm-6 Menu_adding_wraper">
+           <div class="product_add_form_container">
+           		<div class="col-xs-12"><h5>Menu Mapping</h5></div>
+                <hr>
+                	<ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#super_menu">Super Menu</a></li>
+                        <li><a class="main_menu_tab_toggle" data-toggle="tab" href="#main_menu">Main Menu</a></li>
+                        <li><a class="sub_menu_tab_toggle" data-toggle="tab" href="#sub_Menu">Sub Menu</a></li>
+					</ul>
+
+  <div class="tab-content">
+                <div id="super_menu" class="tab-pane fade in active">
+                  <h6>Super Items (ADDing And Modify)</h6>
+                    <ul class="list-group super_menu_list">
+                        
+                    
+                    </ul>
+                    <div class="form-group">
+              
+              <div class="input-group">
+               	<input type="text" class="form-control super_menu_name_field" placeholder="Add New Super Menu Item">
+                <span class="input-group-btn">
+                  <button class="btn btn-default add_super_menu_btn" type="button">Add</button>
+                </span>
+              </div>
+            </div>
+        
+    </div>
+    <div id="main_menu" class="tab-pane fade">
+      
+                
+                  <h6>Main Items (ADDing And Modify)</h6>
+                 	<select class="form-control super_menu_select_list super_menu_list_for_sub_m">
+                    	<option>Please select any of Super Menu item</option>
+                       
+                        
+                    
+                    </select>
+                    <ul class="list-group main_menu_list">
+                        
+                    
+                    </ul>
+                    <div class="form-group">
+              
+              <div class="input-group">
+               
+                <input type="text" class="form-control main_menu_name_field" placeholder="Add New Main Menu Item">
+                <span class="input-group-btn">
+                  <button class="btn btn-default add_main_menu_btn" type="button">Add</button>
+                </span>
+              </div>
+            </div>
+
+    </div>
+    <div id="sub_Menu" class="tab-pane fade">
+      <h6>Sub Items (ADDing And Modify)</h6>
+                 	<select class="form-control super_menu_select_list super_menu_list_for_sub_m" style="margin-bottom:15px">
+                    	<option>Please select any of Super Menu item</option>
+                       
+                        
+                    
+                    </select>
+                    <select class="form-control main_menu_select_list main_menu_list_for_sub_m">
+                    	<option>Please select any of Main Menu item</option>
+                       
+                        
+                    
+                    </select>
+                    <ul class="list-group sub_menu_list">
+                        
+                    
+                    </ul>
+                    <div class="form-group">
+              
+              <div class="input-group">
+               
+                <input type="text" class="form-control sub_menu_name_field" placeholder="Add New sub Menu Item">
+                <span class="input-group-btn">
+                  <button class="btn btn-default add_sub_menu_btn" type="button">Add</button>
+                </span>
+              </div>
+            </div>
+    </div>
+  
+  </div>
+              
+                </div>
+           </div>
+        
+       	 </div>
+        
+        </div>
+    </div>
+
+
+<!-- modals -->
+<div id="loading_popup" class="modal-demo" style="border-radius:0px; background-color:#FFFFFF; opacity:0.9">
+            <div class="text" style="text-align:center; padding:0px">
+               <img src="../imgs/svg-loaders/circles.svg" width="20px">
+               <p style="padding:0px">Proccessing.. Please Wait..</p>
+   			</div> 
+</div>   
+
+<script src="../js/adminscrpits.js"></script>
+<script>
+check_admin_user_session();
+$(".mrp_price,.d_price").on('input',function(){
+	var price = $(".mrp_price").val();
+	var discount = $(".d_price").val();
+	var final_price = price-(price * (discount/100));
+	$(".final_priceval").html("Rs."+final_price+"/-");
+	});
+$(".discount_in_percentage, .discount_in_price,.finalprice_label").hide();
+if($(".discount_mode_insert").is(":checked")){
+	$(".discount_in_percentage,.finalprice_label").show();
+	$(".discount_mode_insert").attr('data-discountmode','1');
+
+	} else {
+		$(".discount_in_price").show();
+		$(".discount_mode_insert").attr('data-discountmode','0');
+		
+		}
+$(".discount_mode_insert").change(function(){
+	if($(".discount_mode_insert").is(":checked")){
+	$(".discount_in_percentage, .discount_in_price,.finalprice_label").hide();
+	$(".discount_in_percentage,.finalprice_label").show();
+	$(".discount_mode_insert").attr('data-discountmode','1');
+
+	} else {
+		$(".discount_in_percentage, .discount_in_price,.finalprice_label").hide();
+		$(".discount_in_price").show();
+		$(".discount_mode_insert").attr('data-discountmode','0');
+		
+	}
+	
+	});
+</script>
+<script>
+	$( document ).ajaxStart(function() {
+					waitingDialog.show();
+});
+$(document).ajaxStop(function () {
+  waitingDialog.hide(); 
+  });
+  
+</script>
+</body>
+
+</html>
