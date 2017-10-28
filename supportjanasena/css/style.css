@@ -90,7 +90,7 @@ footer {
 
 /*Media Queries*/
 /* Smartphones (portrait and landscape) ----------- */
-@media (min-device-width:320px) and (max-device-width:480px){
+@media (min-device-width:320px) and (max-device-width:768px){
   /* Styles */
   body {
     overflow-x: hidden;
@@ -165,7 +165,7 @@ footer {
     margin-top: 4%;
   }
   .wrapper p.line2{
-    width: 750px;
+    width: 100%;
     font-size: 21px;
     line-height: 33px;
     text-align: justify;
