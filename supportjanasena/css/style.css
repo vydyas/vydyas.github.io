@@ -39,11 +39,6 @@ footer {
   bottom: -43px;
   right: 0;
 }
-.wrapper {
-  width: 800px;
-  margin-left: 10%;
-  margin-top: 4%;
-}
 .wrapper p {
   color: #eee;
   width: 30em;
@@ -54,21 +49,8 @@ footer {
   font-size: 34px;
   animation: type 6s steps(60, end);
 }
-.wrapper p.line2{
-  width: 750px;
-  font-size: 21px;
-  line-height: 33px;
-  text-align: justify;
-}
 .wrapper span{
   animation: blink 1s infinite;
-}
-.contentWrapper {
-  padding-bottom: 50px;
-}
-.buttonWrapper {
-  display: flex;
-  justify-content: center;
 }
 .wrapper a.register{
   background: red;
@@ -117,35 +99,65 @@ footer {
 
 /*Media Queries*/
 /* Smartphones (portrait and landscape) ----------- */
-/*@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
 
   /* Styles */
-  /*body {
+  body {
     overflow-x: hidden;
   }
   header {
-    height: 120px;
+    display: flex;
+    justify-content: center;
+  }
+  header .logo {
+    background: url(../img/jenasena_logo.png) no-repeat;
+    height: 150px;
+    width: 100px;
+    background-size: 100px 138px;
+    margin-top: 10px;
+  }
+  .contentWrapper {
+    padding: 0px 50px;
   }
   .wrapper {
-    width: 400px;
-    margin-left: 5%;
-    margin-top: 4%;
+    padding-right: 10px;
   }
   .wrapper p.line2{
-    width: 370px;
-    font-size: 21px;
-    line-height: 33px;
+    width: 300px;
+    font-size: 16px;
+    line-height: 25px;
     text-align: justify;
   }
+  .content> .background {
+    background: url(../img/footerBackground.png) no-repeat;
+    background-position: right bottom;
+    height: 472px;
+    width: 680px;
+    position: absolute;
+    bottom: -470px;
+    background-size: 400px;
+  }
+  .wrapper p.signature {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 50px;
+    animation: type 8s steps(60, end);
+    font-family: 'Mr De Haviland', cursive;
+  }
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
 
-}*/
+}
 
 /*Tablets*/
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
+@media screen
+and (min-width : 768px)
+and (max-width : 1024px) {
 
   /* Styles */
   header {
@@ -159,6 +171,9 @@ and (max-device-width : 1024px) {
     width: 100px;
     background-size: 100px 138px;
     margin-top: 12px;
+  }
+  .contentWrapper {
+    padding: 50px;
   }
   .content> .background {
     background: url(../img/footerBackground.png) no-repeat;
@@ -188,9 +203,6 @@ and (max-device-width : 1024px) {
     font-weight: bold;
     letter-spacing: 2px;
   }
-  .contentWrapper {
-    padding-bottom: 10px;
-  }
   .buttonWrapper {
     display: flex;
     justify-content:flex-start;
@@ -199,11 +211,28 @@ and (max-device-width : 1024px) {
 }
 
 /*Desktops*/
-@media screen and (min-device-width : 1025px) {
+@media screen and (min-width : 1025px) {
 
   /* Styles */
   body {
     overflow-x: hidden;
+  }
+  .wrapper {
+    width: 800px;
+    margin-left: 10%;
+    margin-top: 4%;
+  }
+  .wrapper p.line2{
+    width: 750px;
+    font-size: 21px;
+    line-height: 33px;
+    text-align: justify;
+  }
+  .contentWrapper {
+    padding: 50px;
+  }
+  .contentWrapper {
+    padding-bottom: 10px;
   }
   header .logo {
     background: url(../img/jenasena_logo.png) no-repeat;
@@ -223,6 +252,11 @@ and (max-device-width : 1024px) {
     font-family: 'Mr De Haviland', cursive;
     text-align: right;
     width: 94%;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
   }
 
 }
