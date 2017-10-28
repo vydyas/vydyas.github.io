@@ -2,7 +2,7 @@ body {
   margin :0;
   background: #4a4a4a;
   font-family: 'Work Sans', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 header {
   border-top: solid 5px #d81615;
@@ -11,16 +11,16 @@ header {
   border-top: solid 5px white;
 }
 .blackBorder {
-  border-top: solid 5px #333;
+  border-top: solid 5px black;
 }
 #loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('../img/jenasena_logo.png') 50% 50% no-repeat rgb(249,249,249);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../img/jenasena_logo.png') 50% 50% no-repeat rgb(249,249,249);
   animation:move 3s infinite ease-in-out;
 }
 footer {
@@ -38,16 +38,6 @@ footer {
   position: absolute;
   bottom: -43px;
   right: 0;
-}
-header .logo {
-  background: url(../img/jenasena_logo.png) no-repeat;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  background-size: 100px 138px;
-  right: 100px;
-  top: 50px;
-  background-position: top right;
 }
 .wrapper {
   width: 800px;
@@ -72,15 +62,6 @@ header .logo {
 }
 .wrapper span{
   animation: blink 1s infinite;
-}
-.wrapper p.signature {
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 50px;
-  animation: type 8s steps(60, end);
-  font-family: 'Mr De Haviland', cursive;
-  text-align: right;
-  width: 94%;
 }
 .contentWrapper {
   padding-bottom: 50px;
@@ -125,12 +106,123 @@ header .logo {
 }
 
 @keyframes move{
-0%{
- transform: scale(1) rotate(0deg);
-}
+  0%{
+    transform: scale(1) rotate(0deg);
+  }
   100%{
-   transform: scale(2) rotate(0.1deg);
+    transform: scale(2) rotate(0.1deg);
 
+  }
+}
+
+/*Media Queries*/
+/* Smartphones (portrait and landscape) ----------- */
+/*@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+  /* Styles */
+  /*body {
+    overflow-x: hidden;
+  }
+  header {
+    height: 120px;
+  }
+  .wrapper {
+    width: 400px;
+    margin-left: 5%;
+    margin-top: 4%;
+  }
+  .wrapper p.line2{
+    width: 370px;
+    font-size: 21px;
+    line-height: 33px;
+    text-align: justify;
+  }
+
+}*/
+
+/*Tablets*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+  /* Styles */
+  header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+  }
+  header .logo {
+    background: url(../img/jenasena_logo.png) no-repeat;
+    height: 150px;
+    width: 100px;
+    background-size: 100px 138px;
+    margin-top: 12px;
+  }
+  .content> .background {
+    background: url(../img/footerBackground.png) no-repeat;
+    background-position: right bottom;
+    height: 472px;
+    width: 680px;
+    position: absolute;
+    bottom: -430px;
+    right: 0;
+  }
+  .wrapper p.signature {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 50px;
+    animation: type 8s steps(60, end);
+    font-family: 'Mr De Haviland', cursive;
+  }
+  .wrapper a.register{
+    background: red;
+    padding: 12px;
+    border-bottom: solid 1px white;
+    color: white;
+    font-size: 15px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .contentWrapper {
+    padding-bottom: 10px;
+  }
+  .buttonWrapper {
+    display: flex;
+    justify-content:flex-start;
+  }
+
+}
+
+/*Desktops*/
+@media screen and (min-device-width : 1025px) {
+
+  /* Styles */
+  body {
+    overflow-x: hidden;
+  }
+  header .logo {
+    background: url(../img/jenasena_logo.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-size: 100px 138px;
+    right: 100px;
+    top: 50px;
+    background-position: top right;
+  }
+  .wrapper p.signature {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 50px;
+    animation: type 8s steps(60, end);
+    font-family: 'Mr De Haviland', cursive;
+    text-align: right;
+    width: 94%;
   }
 
 }
