@@ -30,15 +30,6 @@ footer {
   background: #d81615;
   bottom: 0px;
 }
-.content> .background {
-  background: url(../img/footerBackground.png) no-repeat;
-  background-position: right bottom;
-  height: 472px;
-  width: 680px;
-  position: absolute;
-  bottom: -43px;
-  right: 0;
-}
 .wrapper p {
   color: #eee;
   width: 30em;
@@ -99,7 +90,7 @@ footer {
 
 /*Media Queries*/
 /* Smartphones (portrait and landscape) ----------- */
-@media (min-width:320px) and (max-width:768px){
+@media (min-device-width:320px) and (max-device-width:480px){
   /* Styles */
   body {
     overflow-x: hidden;
@@ -131,17 +122,18 @@ footer {
     background: url(../img/footerBackground.png) no-repeat;
     background-position: right bottom;
     height: 472px;
-    width: 680px;
+    width: 400px;
     position: absolute;
-    bottom: -470px;
+    bottom: -512px;
     background-size: 400px;
   }
   .wrapper p.signature {
     white-space: nowrap;
     overflow: hidden;
-    font-size: 50px;
+    font-size: 30px;
     animation: type 8s steps(60, end);
     font-family: 'Mr De Haviland', cursive;
+    width: 300px;
   }
   .buttonWrapper {
     display: flex;
@@ -151,64 +143,8 @@ footer {
 
 }
 
-/*Tablets*/
-/*@media screen
-and (min-width : 768px)
-and (max-width : 1024px) {
-
-  /* Styles */
-  /*header {
-    display: flex;
-    justify-content: center;
-    height: 120px;
-  }
-  header .logo {
-    background: url(../img/jenasena_logo.png) no-repeat;
-    height: 150px;
-    width: 100px;
-    background-size: 100px 138px;
-    margin-top: 12px;
-  }
-  .contentWrapper {
-    padding: 50px;
-  }
-  .content> .background {
-    background: url(../img/footerBackground.png) no-repeat;
-    background-position: right bottom;
-    height: 472px;
-    width: 680px;
-    position: absolute;
-    bottom: -430px;
-    right: 0;
-  }
-  .wrapper p.signature {
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 50px;
-    animation: type 8s steps(60, end);
-    font-family: 'Mr De Haviland', cursive;
-  }
-  .wrapper a.register{
-    background: red;
-    padding: 12px;
-    border-bottom: solid 1px white;
-    color: white;
-    font-size: 15px;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  .buttonWrapper {
-    display: flex;
-    justify-content:flex-start;
-  }
-
-}*/
-
 /*Desktops*/
-@media (min-width: 992px){
+@media (min-device-width: 992px){
 
   /* Styles */
   body {
@@ -233,7 +169,7 @@ and (max-width : 1024px) {
   }
   header .logo {
     background: url(../img/jenasena_logo.png) no-repeat;
-    height: 100px;
+    height: 146px;
     width: 100px;
     position: absolute;
     background-size: 100px 138px;
@@ -254,6 +190,16 @@ and (max-width : 1024px) {
   .buttonWrapper {
     display: flex;
     justify-content: center;
+  }
+
+  .content> .background {
+    background: url(../img/footerBackground.png) no-repeat;
+    background-position: right bottom;
+    height: 472px;
+    width: 680px;
+    position: absolute;
+    bottom: -43px;
+    right: 0;
   }
 
 }
