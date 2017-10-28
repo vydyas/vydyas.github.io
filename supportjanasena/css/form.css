@@ -1,6 +1,6 @@
 body {
   margin :0;
-  background: #4a4a4a;
+  background: white;
   font-family: 'Work Sans', sans-serif;
   overflow-x: hidden;
 }
@@ -70,16 +70,16 @@ footer {
 }
 
 h2 {
-  color: white;
+  font-size: 30px;
+  color: black;
 }
 
 h3 {
+  font-size: 25px;
   color: red;
 }
 .registrationForm {
-  border: solid 1px #eee;
-  height: 400px;
-  width: 400px;
+  width: 800px;
   margin: 0 auto;
 }
 /*animation*/

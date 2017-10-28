@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Natural Language Form</title>
+		<meta name="description" content="Natural Language Form with custom text input and drop-down lists" />
+		<meta name="keywords" content="Natural Language UI, sentence form, text input, contenteditable, html5, css3, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="icon" type="image/png" href="../img/favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body class="nl-blurred" onload="loading()">
+		<div id="loader"></div>
+		<div class="container demo-1">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="../index.html"><span>GO BACK</span></a>
+			</div>
+			<header>
+				<h1>
+					<p style="background: #ec3333;color:#eee">Janasena party stands for strengthening and empowering civil society.</p>
+					<span>Fill below form to support janasena party</span>
+				</h1>
+			</header>
+			<div class="main clearfix">
+				<p style="font-size: 35px;">Dear Janasena Party,</p>
+				<form id="nl-form" class="nl-form">
+					I, <input type="text" value="" placeholder="your name" data-subline="For example: <em>Siddhu Vydyabhushana</em>"/>
+					from
+					<select>
+						<option value="" selected>Your State</option>
+						<option value="2">Andhra Pradesh</option>
+						<option value="3">Telangana</option>
+					</select> state,
+					<select>
+						<option value="" selected>District</option>
+						<option value="2">Srikakulam</option>
+						<option value="3">Vizag</option>District,
+					</select> <input type="text" value="" placeholder="mandal" data-subline="For example: <em>Siddhu Vydyabhushana</em>"/>
+					mandal. Would like to support janasena party because I like pawan kalyan as a
+					<select>
+						<option value="1" selected>Quality</option>
+					 	<option value="1">Fan</option>
+					 	<option value="2">Politician</option>
+					 	<option value="3">A common man</option>
+					</select>.<br/><br/>
+
+					Regards,<br/>
+					<input type="text" value="" placeholder="Your Email" data-subline="For example: <em>Siddhu Vydyabhushana</em>" required/><br/>
+					<input type="text" value="" placeholder="Your Mobile Number" data-subline="For example: <em>Siddhu Vydyabhushana</em>"/>
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Submit your letter</button>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+		</div><!-- /container -->
+		<script src="js/nlform.js"></script>
+		<script src="../js/script.js" type="text/javascript"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body>
+</html>
