@@ -107,13 +107,10 @@ footer {
     margin-top: 10px;
   }
   .contentWrapper {
-    padding: 0px 50px;
-  }
-  .wrapper {
-    padding-right: 10px;
+    padding: 0px 20px;
   }
   .wrapper p.line2{
-    width: 300px;
+    width: 100%;
     font-size: 16px;
     line-height: 25px;
     text-align: justify;
@@ -122,7 +119,7 @@ footer {
     background: url(../img/footerBackground.png) no-repeat;
     background-position: right bottom;
     height: 472px;
-    width: 400px;
+    width: 100%;
     position: absolute;
     bottom: -512px;
     background-size: 400px;
@@ -140,6 +137,18 @@ footer {
     justify-content: center;
     padding-bottom: 30px;
   }
+  .wrapper a.register {
+    background: red;
+    padding: 10px;
+    border-bottom: solid 1px white;
+    color: white;
+    font-size: 12px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
 }
 
