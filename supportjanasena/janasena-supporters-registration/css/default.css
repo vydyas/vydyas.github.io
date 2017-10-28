@@ -70,11 +70,6 @@ a:active {
 	background: #ec3333;
 }
 
-/* Main Content */
-.main {
-	width: 1000px;
-}
-
 /* To Navigation Style */
 .codrops-top {
 	background: #fff;
@@ -144,5 +139,18 @@ a:active {
 	.codrops-icon span {
 		display: none;
 	}
+	.main {
+		width: 50em;
+	}
 
+}
+@media (min-device-width:320px) and (max-device-width:768px){
+	.main {
+		width: 22em;
+	}
+}
+@media (min-device-width:1024px) {
+	.main {
+		width: 1000px;
+	}
 }
