@@ -4,6 +4,15 @@ body {
   font-family: 'Work Sans', sans-serif;
   overflow: hidden;
 }
+header {
+  border-top: solid 5px #d81615;
+}
+.whiteBorder {
+  border-top: solid 5px white;
+}
+.blackBorder {
+  border-top: solid 5px #333;
+}
 #loader {
 	position: fixed;
 	left: 0px;
@@ -27,7 +36,7 @@ footer {
   height: 472px;
   width: 680px;
   position: absolute;
-  bottom: -33px;
+  bottom: -43px;
   right: 0;
 }
 header .logo {
