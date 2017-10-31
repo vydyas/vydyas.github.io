@@ -4,12 +4,12 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-	
+
 	'use strict';
 
 	var document = window.document;
@@ -18,7 +18,7 @@
 		String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
 	}
 
-	function NLForm( el ) {	
+	function NLForm( el ) {
 		this.el = el;
 		this.overlay = this.el.querySelector( '.nl-overlay' );
 		this.fields = [];
@@ -59,10 +59,10 @@
 	NLField.prototype = {
 		_create : function() {
 			if( this.type === 'dropdown' ) {
-				this._createDropDown();	
+				this._createDropDown();
 			}
 			else if( this.type === 'input' ) {
-				this._createInput();	
+				this._createInput();
 			}
 		},
 		_createDropDown : function() {
@@ -97,6 +97,8 @@
 			this.optionsList = document.createElement( 'ul' );
 			this.getinput = document.createElement( 'input' );
 			this.getinput.setAttribute( 'type', 'text' );
+			this.getinput.setAttribute( 'id', this.elOriginal.id );
+			this.getinput.setAttribute( 'onblur', this.elOriginal.getAttribute('onblur') );
 			this.getinput.setAttribute( 'placeholder', this.elOriginal.getAttribute( 'placeholder' ) );
 			this.getinputWrapper = document.createElement( 'li' );
 			this.getinputWrapper.className = 'nl-ti-input';

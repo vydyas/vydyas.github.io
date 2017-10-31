@@ -79,6 +79,11 @@ a:active {
 	background: #ec3333;
 }
 
+.container > header p#error {
+	font-size: 20px;
+	color: red;
+}
+
 /* To Navigation Style */
 .codrops-top {
 	background: #fff;
@@ -162,4 +167,38 @@ a:active {
 	.main {
 		width: 1000px;
 	}
+}
+
+/*Tooltip*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip #tooltiptext {
+    visibility: hidden;
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+		font-size: 14px;
+}
+
+.tooltip #tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
 }
