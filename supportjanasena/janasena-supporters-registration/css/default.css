@@ -171,14 +171,19 @@ a:active {
 
 /*Tooltip*/
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	height: -11px;
+	left: -106px;
+	top: 12px;
+	animation-name: zoomIn;
+	animation-duration:500ms;
 }
 
 .tooltip #tooltiptext {
     visibility: hidden;
-    width: 100%;
+    width: 160px;
     background-color: red;
     color: #fff;
     text-align: center;
@@ -201,4 +206,16 @@ a:active {
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent red transparent;
+}
+
+/*Animation*/
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }

@@ -148,6 +148,7 @@
 			this.form.fldOpen = this.pos;
 			var self = this;
 			this.fld.className += ' nl-field-open';
+			console.log(this.fld);
 		},
 		close : function( opt, idx ) {
 			if( !this.open ) {
