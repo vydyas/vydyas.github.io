@@ -1,7 +1,0 @@
-[31-Oct-2015 10:43:36 Asia/Calcutta] PHP Warning:  unlink(../../imgs/product_imgs/Gillettefusionpower17_20_54_30_10_15.jpg): No such file or directory in /home/creatr1l/public_html/ayyappagrocery.com/admin/phpfiles/delete_product.php on line 10
-[31-Oct-2015 10:44:15 Asia/Calcutta] PHP Warning:  unlink(../../imgs/product_imgs/Gillettefusionpower17_20_56_30_10_15.jpg): No such file or directory in /home/creatr1l/public_html/ayyappagrocery.com/admin/phpfiles/delete_product.php on line 10
-[31-Oct-2015 10:44:52 Asia/Calcutta] PHP Warning:  unlink(../../): Is a directory in /home/creatr1l/public_html/ayyappagrocery.com/admin/phpfiles/delete_product.php on line 10
-[31-Oct-2015 10:46:33 Asia/Calcutta] PHP Warning:  unlink(../../imgs/product_imgs/Gillettefusionpower17_20_54_30_10_15.jpg): No such file or directory in /home/creatr1l/public_html/ayyappagrocery.com/admin/phpfiles/delete_product.php on line 10
-[31-Oct-2015 10:46:47 Asia/Calcutta] PHP Warning:  unlink(../../imgs/product_imgs/Gillettefusionpower17_20_54_30_10_15.jpg): No such file or directory in /home/creatr1l/public_html/ayyappagrocery.com/admin/phpfiles/delete_product.php on line 10
-[10-Nov-2015 18:43:40 Asia/Calcutta] PHP Warning:  unlink(../../img/homepageslider/sugar1kgpack30only.jpg
-): No such file or directory in /home/creatr1l/public_html/ayyappagrocery.com/admin/phpfiles/delete_slider.php on line 10

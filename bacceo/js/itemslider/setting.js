@@ -1,3 +1,0 @@
-$(function() {
-	$( '#mi-slider' ).catslider();
-});

@@ -1,5 +1,0 @@
-		$('.slidyContainer').slidy({
-		});
-
-		$('.accordion').accordy({
-		});
