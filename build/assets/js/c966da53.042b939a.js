@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksiddhu_vydyabhushana_website=self.webpackChunksiddhu_vydyabhushana_website||[]).push([[863],{4469:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);
