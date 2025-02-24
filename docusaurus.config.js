@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hi 🖐, I\'m Siddhu Vydyabhushana',
+  title: 'Siddhu Vydyabhushana',
   tagline: 'Front End Developer | Full Stack Web Developer',
   url: 'https://vydyas.github.io',
   baseUrl: '/',
@@ -57,27 +57,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // navbar: {
-      //   title: 'My Site',
-      //   logo: {
-      //     alt: 'My Site Logo',
-      //     src: 'img/logo.svg',
-      //   },
-      //   items: [
-      //     // {
-      //     //   type: 'doc',
-      //     //   docId: 'intro',
-      //     //   position: 'left',
-      //     //   label: 'Tutorial',
-      //     // },
-      //     // {to: '/blog', label: 'Blog', position: 'left'},
-      //     // // {
-      //     // //   href: 'https://github.com/facebook/docusaurus',
-      //     // //   label: 'GitHub',
-      //     // //   position: 'right',
-      //     // // },
-      //   ],
-      // },
+      navbar: {
+        items: [
+          {
+            href: 'https://github.com/vydyas',
+            label: '🚀 Projects',
+            position: 'right',
+          },
+          {
+            href: 'https://www.linkedin.com/in/siddhucse/',
+            label: '🎓 Work Experience',
+            position: 'right',
+          },
+        ],
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

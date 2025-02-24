@@ -6,85 +6,63 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #333333;
+  --ifm-color-primary-dark: #000000;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #666666;
+  --ifm-color-primary-lighter: #999999;
+  --ifm-color-primary-lightest: #cccccc;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  
+  --ifm-color-emphasis-100: #f8f9fa;
+  --ifm-color-emphasis-200: #e9ecef;
+  --ifm-color-emphasis-300: #dee2e6;
+  --ifm-color-emphasis-400: #ced4da;
+  --ifm-color-emphasis-500: #adb5bd;
+  --ifm-color-emphasis-600: #6c757d;
+  --ifm-color-emphasis-700: #495057;
+  --ifm-color-emphasis-800: #333333;
+  --ifm-color-emphasis-900: #000000;
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #ffffff;
+  --ifm-color-primary-dark: #e6e6e6;
+  --ifm-color-primary-darker: #cccccc;
+  --ifm-color-primary-darkest: #b3b3b3;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-.hero {
-  background-color: transparent;
-  color: #333;
-}
-
-.navbar {
-  box-shadow: none;
-  background: transparent;
-}
-
-.navbar::before {
-  animation: 1s linear 0s infinite normal none running number-swap;
-  content: "01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100";
-  top: 0px;
-  left: 0px;
-  color: #333;
-  font-size: 15px;
-  pointer-events: none;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  opacity: 0.3;
-  white-space: nowrap;
-  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 95%); 
-}
-
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 100px;}
+  
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: #262626;
+  
+  --ifm-color-emphasis-100: #262626;
+  --ifm-color-emphasis-200: #333333;
+  --ifm-color-emphasis-300: #404040;
+  --ifm-color-emphasis-400: #595959;
+  --ifm-color-emphasis-500: #737373;
+  --ifm-color-emphasis-600: #8c8c8c;
+  --ifm-color-emphasis-700: #a6a6a6;
+  --ifm-color-emphasis-800: #bfbfbf;
+  --ifm-color-emphasis-900: #d9d9d9;
 }
 
 body {
+  font-family: var(--ifm-font-family-base);
   animation: fadeInAnimation ease 3s;
   animation-fill-mode: backwards;
-  background: linear-gradient(90deg, rgb(164 245 255) 0%, rgb(223 208 200 / 75%) 30%, rgb(97 207 232) 85%) 0% 0% / 200% 100%;
-
-/* 
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh; */
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-800);
 }
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 
 @keyframes fadeInAnimation {
   0% {
@@ -96,16 +74,20 @@ body {
 }
 
 ::selection {
-  color: rgb(46, 46, 46);
-  background: rgb(135, 239, 165); 
-  border-radius: 50%;
+  background: #eee;
+  color: #333;
 }
-
-/* anchor links */
 
 a {
+  color: #333;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
+
+a:hover {
+  color: #000;
+}
+
 /* cut buttons*/
 
 .button--cut {
@@ -148,7 +130,6 @@ a {
     object-fit: cover;
     transform: rotate(8deg);
     box-shadow: rgb(255 215 77 / 60%) -1px -1px 6px, rgb(124 127 255 / 60%) 1px 1px 6px;
-    background: rgb(23, 15, 30);
     transition: all 0.2s ease 0s;
 }
 
@@ -185,22 +166,6 @@ a {
   }
 }
 
-/* 
-@-webkit-keyframes number-swap {
-  25% {
-    content:"01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001";
-  }
-  50% {
-    content:"01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100";
-  }
-  75% {
-    content:"01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001";
-  }
-  100% {
-    content:"01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100";
-  }
-} */
-
 @keyframes number-swap {
   25% {
     content:"01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001";
@@ -227,19 +192,12 @@ a {
   font-weight: bold;
 }
 
-a {
-  color: #333;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-
 @keyframes float {
 	0% {
 		transform: translatey(0px);
 	}
 	50% {
-		transform: translatey(-20px);
+		transform: translatey(-10px);
 	}
 	100% {
 		transform: translatey(0px);
@@ -265,4 +223,26 @@ a {
       opacity: 1;
       transform: scale(1)
   }
+}
+
+.navbar {
+  display: none; /* Hide default Docusaurus navbar */
+}
+
+.navbar__inner {
+  margin-top: 20px;
+}
+
+.navbar::before {
+  display: none;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 100px;}
+}
+
+.company {
+  color: #3993ed;
+  font-weight: 500;
 }
