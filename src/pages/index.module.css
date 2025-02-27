@@ -139,6 +139,49 @@
   margin-bottom: 2rem;
 }
 
+.briefList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.briefList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.briefList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+}
+
+.salesforceLink {
+  color: #00a1e0;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.salesforceLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #00a1e0;
+  transition: width 0.3s ease;
+}
+
+.salesforceLink:hover::after {
+  width: 100%;
+}
+
 .socialLinks {
   display: flex;
   gap: 0.75rem;
@@ -230,4 +273,31 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .briefList {
+    text-align: left;
+  }
+}
+
+.projectLink {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.projectLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--ifm-color-primary);
+  transition: width 0.3s ease;
+}
+
+.projectLink:hover::after {
+  width: 100%;
 }

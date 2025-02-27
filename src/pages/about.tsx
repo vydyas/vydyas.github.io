@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Header from '@site/src/components/Header';
 import RouteTransition from '@site/src/components/RouteTransition';
+import { motion } from 'framer-motion';
 import styles from './pages.module.css';
 
 const skills = {
@@ -37,12 +38,14 @@ export default function About(): JSX.Element {
       <RouteTransition>
         <main className={styles.mainContainer}>
           <div className={styles.aboutWrapper}>
-            <section className={styles.aboutHero}>
-              <div className={styles.aboutImage}>
-                <img src="/img/profile.jpg" alt="Siddhu Vydyabhushana" />
-              </div>
+            <motion.section 
+              className={styles.introSection}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className={styles.aboutTitle}>About Me</h1>
               <div className={styles.aboutContent}>
-                <h5 className={styles.aboutTitle}>About Me</h5>
                 <p className={styles.aboutDescription}>
                   Hi! I'm a Senior Software Engineer with over 8 years of experience in building scalable web applications. 
                   Currently working at Salesforce, where I focus on creating enterprise-level UI components and improving developer experience.
@@ -53,68 +56,66 @@ export default function About(): JSX.Element {
                   or exploring new technologies.
                 </p>
               </div>
-            </section>
+            </motion.section>
 
-            <section className={styles.skillsSection}>
+            <motion.section 
+              className={styles.skillsSection}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <h2>Skills & Expertise</h2>
               <div className={styles.skillsGrid}>
-                <div className={styles.skillCategory}>
-                  <h3>Frontend</h3>
-                  <ul>
-                    {skills.frontend.map(skill => (
-                      <li key={skill}>{skill}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={styles.skillCategory}>
-                  <h3>Backend</h3>
-                  <ul>
-                    {skills.backend.map(skill => (
-                      <li key={skill}>{skill}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={styles.skillCategory}>
-                  <h3>Tools & Practices</h3>
-                  <ul>
-                    {skills.tools.map(skill => (
-                      <li key={skill}>{skill}</li>
-                    ))}
-                  </ul>
-                </div>
+                {Object.entries(skills).map(([category, items], idx) => (
+                  <motion.div 
+                    key={category} 
+                    className={styles.skillCategory}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * idx + 0.3 }}
+                  >
+                    <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+                    <ul>
+                      {items.map((skill, i) => (
+                        <motion.li 
+                          key={skill}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.05 * i + 0.1 * idx + 0.4 }}
+                        >
+                          {skill}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
               </div>
-            </section>
+            </motion.section>
 
-            <section className={styles.interestsSection}>
+            <motion.section 
+              className={styles.interestsSection}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <h2>Interests & Focus Areas</h2>
               <div className={styles.interestsGrid}>
                 {interests.map((interest, idx) => (
-                  <div key={idx} className={styles.interestCard}>
+                  <motion.div 
+                    key={idx} 
+                    className={styles.interestCard}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.1 * idx + 0.5 }}
+                    whileHover={{ y: -5 }}
+                  >
                     <span className={styles.interestIcon}>{interest.icon}</span>
                     <h3>{interest.title}</h3>
                     <p>{interest.description}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </section>
-
-            <section className={styles.valuesSection}>
-              <h2>Values & Approach</h2>
-              <div className={styles.valuesList}>
-                <div className={styles.valueItem}>
-                  <h3>User-Centric Design</h3>
-                  <p>Building products that solve real problems and provide excellent user experiences.</p>
-                </div>
-                <div className={styles.valueItem}>
-                  <h3>Code Quality</h3>
-                  <p>Writing clean, maintainable, and well-tested code that stands the test of time.</p>
-                </div>
-                <div className={styles.valueItem}>
-                  <h3>Continuous Learning</h3>
-                  <p>Staying updated with the latest technologies and best practices in web development.</p>
-                </div>
-              </div>
-            </section>
+            </motion.section>
           </div>
         </main>
       </RouteTransition>

@@ -111,10 +111,17 @@ function MainSection() {
             className={styles.brief}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.4 }}
           >
-            I build accessible, inclusive products and digital experiences for the web.
-            Passionate about creating beautiful user interfaces and scalable applications.
+            <ul className={styles.briefList}>
+              <li>
+                Senior Software Engineer at <a href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>Salesforce</a>
+              </li>
+              <li>
+                Building <a href="https://simpleresu.me" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>simpleresu.me</a>, 
+                an AI-powered resume builder
+              </li>
+            </ul>
           </motion.p>
           <motion.div 
             className={styles.socialLinks}

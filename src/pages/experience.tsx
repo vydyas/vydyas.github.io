@@ -8,21 +8,35 @@ import styles from './pages.module.css';
 const experiences = [
   {
     company: 'Salesforce',
+    favicon: 'https://www.salesforce.com/favicon.ico',
     role: 'Senior Software Engineer',
     period: '2020 - Present',
-    description: 'Leading frontend development for the Lightning Design System team, focusing on building scalable and accessible UI components.',
+    description: 'Leading frontend development for the Lightning Design System team.',
     achievements: [
-      'Led the development of the new Lightning Web Components framework',
-      'Improved component library performance by 40%',
-      'Mentored 5+ junior developers and conducted technical interviews',
-      'Contributed to the design system documentation and best practices'
+      'Building and maintaining Lightning Web Components framework',
+      'Improving component library performance and accessibility',
+      'Mentoring junior developers and conducting technical interviews',
+      'Contributing to design system documentation and best practices'
+    ]
+  },
+  {
+    company: 'SimpleResume',
+    role: 'Founder & Developer',
+    period: '2023 - Present',
+    description: 'Building an AI-powered resume builder platform.',
+    achievements: [
+      'Developed the entire platform from scratch using Next.js and AI',
+      'Implemented real-time resume editing and preview',
+      'Created AI-powered content suggestions and formatting',
+      'Optimized performance and user experience'
     ]
   },
   {
     company: 'Microsoft',
+    favicon: 'https://www.microsoft.com/favicon.ico',
     role: 'Software Engineer II',
     period: '2018 - 2020',
-    description: 'Worked on the Azure Portal team, developing cloud management interfaces and monitoring tools.',
+    description: 'Worked on Azure Portal team, developing cloud management interfaces.',
     achievements: [
       'Developed real-time monitoring dashboard used by 100k+ users',
       'Reduced page load time by 60% through code optimization',
@@ -34,24 +48,24 @@ const experiences = [
     company: 'Amazon',
     role: 'Frontend Developer',
     period: '2016 - 2018',
-    description: "Part of the Amazon Prime Video team, working on the streaming platform's user interface.",
+    description: 'Part of the Amazon Prime Video team, working on streaming platform UI.',
     achievements: [
       'Built new video player controls increasing user engagement by 25%',
-      'Implemented responsive design for multiple devices and platforms',
+      'Implemented responsive design for multiple devices',
       'Created reusable component library used across teams',
-      'Optimized video loading performance reducing buffer time by 30%'
+      'Optimized video loading performance reducing buffer time'
     ]
   },
   {
     company: 'Google',
     role: 'Software Engineer Intern',
     period: '2015 - 2016',
-    description: 'Internship with the Chrome DevTools team, focusing on developer experience improvements.',
+    description: 'Internship with the Chrome DevTools team.',
     achievements: [
       'Developed new debugging features for Chrome DevTools',
       'Created documentation for new API implementations',
-      'Contributed to open source projects in the Chrome ecosystem',
-      'Received full-time offer after successful internship completion'
+      'Contributed to open source projects in Chrome ecosystem',
+      'Received full-time offer after successful internship'
     ]
   }
 ];
@@ -67,9 +81,96 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
+  hidden: { opacity: 0, x: -50 },
+  show: { opacity: 1, x: 0 }
 };
+
+const ExperienceCard = ({ experience, index }) => (
+  <motion.div 
+    className={`${styles.timelineItem} ${index % 2 === 1 ? styles.timelineRight : ''}`}
+    variants={item}
+  >
+    <div className={styles.timelineDot}>
+      <span className={styles.dot}></span>
+      <span className={styles.line}></span>
+    </div>
+    <motion.div 
+      className={styles.timelineContent}
+      whileHover={{ x: index % 2 === 1 ? -10 : 10 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <div className={styles.timelineHeader}>
+        <motion.h2 
+          className={styles.companyName}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 * index }}
+        >
+          {experience.favicon && (
+            <img 
+              src={experience.favicon} 
+              alt={`${experience.company} logo`} 
+              className={styles.companyFavicon}
+              onError={(e) => e.currentTarget.style.display = 'none'}
+            />
+          )}
+          {experience.company}
+        </motion.h2>
+        <motion.span 
+          className={styles.period}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 * index }}
+        >
+          {experience.period}
+        </motion.span>
+      </div>
+      <motion.h3 
+        className={styles.role}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 * index }}
+      >
+        {experience.role}
+      </motion.h3>
+      <motion.p 
+        className={styles.description}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 * index }}
+      >
+        {experience.description}
+      </motion.p>
+      <motion.ul 
+        className={styles.achievements}
+        initial="hidden"
+        animate="show"
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.1,
+              delayChildren: 0.6 * index
+            }
+          }
+        }}
+      >
+        {experience.achievements.map((achievement, i) => (
+          <motion.li 
+            key={i}
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              show: { opacity: 1, x: 0 }
+            }}
+          >
+            {achievement}
+          </motion.li>
+        ))}
+      </motion.ul>
+    </motion.div>
+  </motion.div>
+);
 
 export default function Experience(): JSX.Element {
   return (
@@ -79,7 +180,6 @@ export default function Experience(): JSX.Element {
       <Header />
       <RouteTransition>
         <main className={styles.mainContainer}>
-          <h1 className={styles.pageTitle}>Work Experience</h1>
           <motion.div 
             className={styles.timelineContainer}
             variants={container}
@@ -87,37 +187,7 @@ export default function Experience(): JSX.Element {
             animate="show"
           >
             {experiences.map((exp, idx) => (
-              <motion.div 
-                key={idx} 
-                className={styles.timelineItem}
-                variants={item}
-                whileHover={{ x: 10, transition: { duration: 0.2 } }}
-              >
-                <div className={styles.timelineContent}>
-                  <motion.h2 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 * idx }}
-                  >
-                    {exp.company}
-                  </motion.h2>
-                  <h3>{exp.role}</h3>
-                  <p className={styles.period}>{exp.period}</p>
-                  <p>{exp.description}</p>
-                  <ul className={styles.achievements}>
-                    {exp.achievements.map((achievement, i) => (
-                      <motion.li 
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 * i + 0.3 * idx }}
-                      >
-                        {achievement}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
+              <ExperienceCard key={idx} experience={exp} index={idx} />
             ))}
           </motion.div>
         </main>
