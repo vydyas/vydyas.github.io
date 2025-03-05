@@ -4,6 +4,8 @@ import Header from '@site/src/components/Header';
 import RouteTransition from '@site/src/components/RouteTransition';
 import { motion, useInView } from 'framer-motion';
 import styles from './pages.module.css';
+import { ProjectShimmer } from '@site/src/components/LoadingShimmer';
+import ScrollButton from '../components/ScrollButton';
 
 // Gradient backgrounds for projects without images
 const gradients = [
@@ -32,20 +34,30 @@ const projects = [
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio website built with Docusaurus and React, featuring dark mode, animations, and responsive design.',
-    image: 'linear-gradient(135deg, #1589EE 0%, #5EB4FF 100%)',
+    image: '/img/projects/portfolio.png', // Will fallback to gradient if image doesn't exist
     tech: ['React', 'TypeScript', 'Docusaurus', 'Framer Motion'],
-    githubUrl: 'https://github.com/vydyas/portfolio',
+    githubUrl: 'https://github.com/vydyas/vydyas.github.io',
     liveUrl: 'https://vydyas.github.io',
     featured: true
   },
   {
-    title: 'React Component Library',
-    description: 'A collection of reusable React components with TypeScript support and comprehensive documentation.',
-    image: 'linear-gradient(135deg, #6157FF 0%, #EE49FD 100%)',
-    tech: ['React', 'TypeScript', 'Storybook', 'Jest'],
-    githubUrl: 'https://github.com/vydyas/react-components',
+    title: 'Online Movie Ticket Booking System',
+    description: 'Online Movie Ticket Booking Script is a fully functional theatre booking system designed to allow users to book movie tickets online with ease. This script provides information about movies, theatres, and showtimes, while allowing customers to select and book their preferred seats. It includes robust features like multiple user roles',
+    image: '/img/projects/movie.png', // Will fallback to gradient if image doesn't exist
+    tech: ['PHP', 'Javascript', 'MySQL', 'HTML', 'CSS', 'Bootstrap'],
+    githubUrl: 'https://github.com/vydyas/Online-Movie-Ticket-Booking-Script-Free',
+    liveUrl: '',
     featured: true
-  }
+  },
+  {
+    title: 'JSON Formatter',
+    description: 'FormatJSON.io helps you manage and convert JSON to other formats efficiently. JSON to XML, JSON Beautifier, JSON Minifier, JSON TREE VIEW.',
+    image: '/img/projects/json.png', // Will fallback to gradient if image doesn't exist
+    tech: ['React', 'TypeScript'],
+    githubUrl: 'https://github.com/vydyas/formatjson.io',
+    liveUrl: 'https://www.formatjson.io/',
+    featured: true
+  },
 ];
 
 const TypeWriter = ({ text, delay = 0 }) => {
@@ -168,6 +180,15 @@ const ProjectCard = ({ project, index }) => {
 };
 
 export default function Projects(): JSX.Element {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Layout
       title="Open Source Projects | Siddhu Vydyabhushana"
@@ -175,13 +196,22 @@ export default function Projects(): JSX.Element {
       <Header />
       <RouteTransition>
         <main className={styles.mainContainer}>
-          <div className={styles.projectsGrid}>
-            {projects.map((project, idx) => (
-              <ProjectCard key={idx} project={project} index={idx} />
-            ))}
-          </div>
+          {isLoading ? (
+            <div className={styles.projectsGrid}>
+              {[1, 2, 3].map((i) => (
+                <ProjectShimmer key={i} />
+              ))}
+            </div>
+          ) : (
+            <div className={styles.projectsGrid}>
+              {projects.map((project, idx) => (
+                <ProjectCard key={idx} project={project} index={idx} />
+              ))}
+            </div>
+          )}
         </main>
       </RouteTransition>
+      <ScrollButton />
     </Layout>
   );
 } 

@@ -1,0 +1,152 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 3rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.serviceCard {
+  background: var(--ifm-background-surface-color);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.description {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.includes {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.includes h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.includes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.includes li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.includes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+}
+
+.bookButton {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.bookButton:hover {
+  background: var(--ifm-color-primary-dark);
+  text-decoration: none;
+  color: white;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .serviceCard {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .serviceCard:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+} 

@@ -1,0 +1,41 @@
+.decodingText {
+  font-family: 'Fira Code', monospace;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  text-shadow: 0 0 8px rgba(var(--ifm-color-primary-rgb), 0.2);
+  animation: glow 2s ease-in-out infinite alternate;
+  min-height: 1.2em;
+  line-height: 1.2;
+  min-width: 100%;
+  text-align: left;
+  white-space: pre; /* Preserve whitespace */
+  transition: text-shadow 0.3s ease;
+}
+
+/* Container to maintain consistent width */
+.decodingText::before {
+  content: attr(data-original);
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-family: 'Fira Code', monospace;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 4px rgba(var(--ifm-color-primary-rgb), 0.2);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(var(--ifm-color-primary-rgb), 0.3);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(var(--ifm-color-primary-rgb), 0.2);
+  }
+}
+
+/* Add Fira Code font for better monospace display */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap'); 

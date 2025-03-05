@@ -155,4 +155,28 @@
 .emoji {
   font-size: 1.2rem;
   line-height: 1;
+}
+
+.navLink {
+  color: var(--ifm-color-emphasis-900);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--ifm-color-primary);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
 } 

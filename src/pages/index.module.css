@@ -53,18 +53,25 @@
   padding: 2rem;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .mainContainer {
   width: 100%;
 }
 
+.heroSection {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 6rem 0 4rem;
+}
+
 .profileSection {
   display: flex;
   align-items: center;
   gap: 4rem;
-  margin: 4rem 0;
+  width: 100%;
   animation: fadeIn 1s ease-out;
 }
 
@@ -249,11 +256,12 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .profileSection {
     flex-direction: column;
-    text-align: center;
     gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
   }
 
   .profileImage {
@@ -262,20 +270,62 @@
   }
 
   .name {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .roleWrapper {
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   .brief {
-    margin: 0 auto;
+    font-size: 1rem;
+    text-align: left;
   }
 
   .socialLinks {
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .heroSection {
+    min-height: auto;
+    padding: 6rem 1rem 2rem;
+  }
+
+  .mainContainer {
+    padding: 0 1rem;
+  }
+
+  .headerContent {
+    width: 100%;
   }
 
   .briefList {
     text-align: left;
+  }
+
+  .briefList li {
+    padding-left: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .profileImage {
+    width: 160px;
+    height: 160px;
+  }
+
+  .socialLink {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -300,4 +350,327 @@
 
 .projectLink:hover::after {
   width: 100%;
+}
+
+/* Experience section */
+.experienceSection {
+  padding: 6rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.experienceSection::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: calc(100% - 12rem);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ifm-color-emphasis-200) 5%,
+    var(--ifm-color-emphasis-200) 95%,
+    transparent
+  );
+  top: 10rem;
+}
+
+.timelineContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 5rem;
+  width: 50%;
+  margin-left: auto;
+  position: relative;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.timelineItem:nth-child(odd) {
+  margin-left: 0;
+  justify-content: flex-end;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .dot {
+  background: var(--ifm-color-primary);
+  transform: scale(1.2);
+}
+
+.timelineContent {
+  width: calc(100% - 50px);
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  padding: calc(1.5rem + 1px);
+  margin: 0 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background-clip: padding-box;
+}
+
+.timelineContent::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: 1;
+}
+
+.timelineItem:nth-child(even) .timelineContent::before {
+  left: -11px;
+  border-width: 11px 11px 11px 0;
+  border-color: transparent var(--ifm-background-surface-color) transparent transparent;
+  filter: drop-shadow(-3px 0px 2px rgba(0, 0, 0, 0.05));
+}
+
+.timelineItem:nth-child(odd) .timelineContent::before {
+  right: -11px;
+  border-width: 11px 0 11px 11px;
+  border-color: transparent transparent transparent var(--ifm-background-surface-color);
+  filter: drop-shadow(3px 0px 2px rgba(0, 0, 0, 0.05));
+}
+
+.timelineContent::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+  margin: -1px;
+  background: linear-gradient(
+    90deg,
+    var(--ifm-color-emphasis-200),
+    var(--ifm-color-primary-lighter),
+    var(--ifm-color-emphasis-200)
+  );
+  background-size: 200% 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.timelineContent:hover {
+  border-color: transparent;
+}
+
+.timelineContent:hover::after {
+  opacity: 0.3;
+  animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .experienceSection::before {
+    left: 20px;
+  }
+
+  .timelineItem,
+  .timelineItem:nth-child(odd) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 40px;
+  }
+
+  .timelineDot {
+    left: 20px;
+  }
+
+  .timelineContent {
+    width: 100%;
+    margin: 0;
+  }
+
+  .timelineContent::before {
+    left: -11px;
+    border-width: 11px 11px 11px 0;
+    border-color: transparent var(--ifm-background-surface-color) transparent transparent;
+    filter: drop-shadow(-3px 0px 2px rgba(0, 0, 0, 0.05));
+  }
+
+  .timelineItem:nth-child(odd) .timelineContent::before {
+    right: auto;
+    left: -11px;
+    border-width: 11px 11px 11px 0;
+    border-color: transparent var(--ifm-background-surface-color) transparent transparent;
+  }
+
+  .companyHeader {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .period {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    order: -1;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .experienceSection::before {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ifm-color-emphasis-300) 5%,
+    var(--ifm-color-emphasis-300) 95%,
+    transparent
+  );
+}
+
+[data-theme='dark'] .dot {
+  background: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .timelineContent {
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .timelineContent::before {
+  filter: drop-shadow(-3px 0px 2px rgba(0, 0, 0, 0.1));
+}
+
+[data-theme='dark'] .timelineItem:nth-child(odd) .timelineContent::before {
+  filter: drop-shadow(3px 0px 2px rgba(0, 0, 0, 0.1));
+}
+
+[data-theme='dark'] .timelineContent::after {
+  background: linear-gradient(
+    90deg,
+    var(--ifm-color-emphasis-300),
+    var(--ifm-color-primary),
+    var(--ifm-color-emphasis-300)
+  );
+}
+
+[data-theme='dark'] .timelineContent:hover::after {
+  opacity: 0.2;
+}
+
+/* Update company header and favicon styles */
+.companyHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.companyFavicon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: contain;
+  padding: 2px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.companyName {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 500;
+}
+
+.period {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-left: auto;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .companyFavicon {
+  background: var(--ifm-color-emphasis-100);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add section title styles */
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 600;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--ifm-color-primary);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* Dark mode adjustment */
+[data-theme='dark'] .sectionTitle::after {
+  opacity: 0.5;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.nameText {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.1em;
 }

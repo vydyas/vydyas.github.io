@@ -1,0 +1,114 @@
+.scrollButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 99;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.scrollButton:hover {
+  transform: translateY(-2px);
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.scrollButton.up {
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+}
+
+.scrollButton.up:hover {
+  background: var(--ifm-color-primary-dark);
+  color: white;
+}
+
+.scrollButton.down {
+  background: rgba(var(--ifm-color-primary-rgb), 0.9);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.up .icon {
+  transform: rotate(0deg);
+}
+
+.down .icon {
+  transform: rotate(0deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .scrollButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ifm-color-emphasis-500);
+}
+
+[data-theme='dark'] .scrollButton:hover {
+  color: var(--ifm-color-primary-lighter);
+  border-color: var(--ifm-color-primary-lighter);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme='dark'] .scrollButton.up {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+[data-theme='dark'] .scrollButton.up:hover {
+  background: var(--ifm-color-primary-lighter);
+}
+
+@media (max-width: 768px) {
+  .scrollButton {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollButton {
+    animation: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .icon {
+    transition: none;
+  }
+} 
