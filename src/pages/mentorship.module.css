@@ -31,24 +31,57 @@
 .serviceCard {
   background: var(--ifm-background-surface-color);
   border-radius: 16px;
-  padding: 2rem;
   transition: all 0.3s ease;
-  border: 1px solid var(--ifm-color-emphasis-200);
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  padding: 1px; /* Reduced padding to show border */
+}
+
+.serviceCardInner {
+  background: var(--ifm-background-surface-color);
+  border-radius: 15px; /* Slightly smaller to show border */
+  padding: 2rem;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Update animated border */
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--ifm-color-primary) 20%,
+    var(--border-glow) 40%,
+    var(--ifm-color-primary) 60%,
+    transparent
+  );
+  background-size: 200% 200%;
+  opacity: 0.3;
+  animation: serviceBorder 6s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
 }
 
 .serviceCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  border-color: var(--ifm-color-primary);
+}
+
+.serviceCard:hover::before {
+  opacity: 0.6;
 }
 
 .serviceIcon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .serviceTitle {
@@ -149,4 +182,66 @@
   .servicesGrid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Clean ribbon styles without animation */
+.ribbon {
+  position: absolute;
+  right: -6px;
+  top: -6px;
+  z-index: 3;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  text-align: right;
+}
+
+.ribbonText {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  width: 110px;
+  display: block;
+  background: #44b700;
+  background: linear-gradient(#44b700 0%, #3da500 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 22px;
+  right: -25px;
+  letter-spacing: 0.5px;
+}
+
+.ribbonText::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #2d7b00;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #2d7b00;
+}
+
+.ribbonText::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #2d7b00;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #2d7b00;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .ribbonText {
+  background: linear-gradient(#44b700 0%, #3da500 100%);
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 } 

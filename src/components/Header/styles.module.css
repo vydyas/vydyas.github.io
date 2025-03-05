@@ -179,4 +179,99 @@
 
 .navLink:hover::after {
   width: 100%;
+}
+
+.socialDropdown {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.socialDropdownButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--ifm-color-emphasis-700);
+  transition: color 0.2s ease;
+}
+
+.socialDropdownButton:hover {
+  color: var(--ifm-color-primary);
+}
+
+.socialDropdownContent {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  min-width: 200px;
+  z-index: 1000;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--ifm-color-emphasis-800);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.socialLink:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.socialLink[data-copied]::after {
+  content: 'Copied!';
+  position: absolute;
+  right: 1rem;
+  color: var(--ifm-color-success);
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .socialDropdownContent {
+    position: fixed;
+    top: auto;
+    bottom: 80px;
+    right: 1rem;
+    left: 1rem;
+    min-width: auto;
+  }
 } 

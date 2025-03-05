@@ -34,7 +34,6 @@
 
 .projectCard {
   background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -42,11 +41,55 @@
   min-height: 500px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding: 1px; /* Space for gradient border */
 }
 
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+/* Add subtle animated gradient border */
+.projectCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ifm-color-primary) 25%,
+    var(--ifm-color-primary-light) 50%,
+    var(--ifm-color-primary) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0.3;
+  animation: shimmerBorder 4s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes shimmerBorder {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Enhance hover effect */
+.projectCard:hover::before {
+  opacity: 0.6;
+}
+
+.projectContent {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--ifm-background-surface-color);
 }
 
 .projectImage {
@@ -112,17 +155,6 @@
   background: white;
   color: var(--ifm-color-primary);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.projectContent {
-  padding: 1.5rem;
-  flex: 1;
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  background: var(--ifm-background-surface-color);
-  position: relative;
-  z-index: 1;
 }
 
 .projectTitle {

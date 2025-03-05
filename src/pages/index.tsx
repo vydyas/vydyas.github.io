@@ -192,6 +192,9 @@ function MainSection() {
                 Building <a href="https://simpleresu.me" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>simpleresu.me</a>, 
                 an AI-powered resume builder
               </li>
+              <li>
+                Mail me at <a href="mailto:vydyas@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>vydyas@gmail.com</a>
+              </li>
             </ul>
           </motion.p>
           <motion.div 
