@@ -5,7 +5,7 @@ import RouteTransition from '@site/src/components/RouteTransition';
 import { motion, useInView } from 'framer-motion';
 import styles from './pages.module.css';
 import { ProjectShimmer } from '@site/src/components/LoadingShimmer';
-import ScrollButton from '../components/ScrollButton';
+import SEO from '../components/SEO';
 
 // Gradient backgrounds for projects without images
 const gradients = [
@@ -23,7 +23,7 @@ const getRandomGradient = () => {
 
 const projects = [
   {
-    title: 'SimpleResume.me',
+    title: 'SimpleResu.me',
     description: 'AI-powered resume builder that helps users create professional resumes with intelligent suggestions and real-time preview.',
     image: '/img/projects/simpleresu.me.png', // Will fallback to gradient if image doesn't exist
     tech: ['Next.js', 'TypeScript', 'OpenAI', 'TailwindCSS'],
@@ -63,8 +63,21 @@ const projects = [
 const TypeWriter = ({ text, delay = 0 }) => {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" }); // Adjusted margin for mobile
+
+  useEffect(() => {
+    // Check if mobile device
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     if (isInView && !isTyping) {
@@ -82,12 +95,17 @@ const TypeWriter = ({ text, delay = 0 }) => {
           } else {
             clearInterval(typeInterval);
           }
-        }, 20); // Adjust typing speed here
+        }, isMobile ? 10 : 20); // Faster typing on mobile
 
         return () => clearInterval(typeInterval);
-      }, delay);
+      }, isMobile ? delay / 2 : delay); // Shorter delay on mobile
     }
-  }, [text, delay, isInView]);
+  }, [text, delay, isInView, isMobile]);
+
+  // On mobile, show full text immediately if not in view
+  if (isMobile && !isInView) {
+    return <span>{text}</span>;
+  }
 
   return <span ref={ref}>{displayText}</span>;
 };
@@ -193,6 +211,17 @@ export default function Projects(): JSX.Element {
     <Layout
       title="Open Source Projects | Siddhu Vydyabhushana"
       description="Open source projects and contributions">
+      <SEO 
+        title="Projects - Siddhu Vydyabhushana"
+        description="Explore my portfolio of full-stack development projects using React, Node.js, and cloud technologies. View live demos and source code."
+        keywords={[
+          "Siddhu Vydyabhushana projects",
+          "React projects",
+          "Full stack projects",
+          "Web development portfolio",
+          "Software engineering projects"
+        ]}
+      />
       <Header />
       <RouteTransition>
         <main className={styles.mainContainer}>
@@ -211,7 +240,6 @@ export default function Projects(): JSX.Element {
           )}
         </main>
       </RouteTransition>
-      <ScrollButton />
     </Layout>
   );
 } 

@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import RouteTransition from '@site/src/components/RouteTransition';
 import Header from '@site/src/components/Header';
 import styles from './mentorship.module.css';
+import SEO from '../components/SEO';
 
 const mentorshipServices = [
   {
@@ -65,10 +66,19 @@ const mentorshipServices = [
 
 export default function Mentorship(): JSX.Element {
   return (
-    <Layout
-      title="Mentorship | Siddhu Vydyabhushana"
-      description="Book a mentorship session for career guidance, resume review, or get referred to top tech companies."
-    >
+    <Layout>
+      <SEO 
+        title="Mentorship - Siddhu Vydyabhushana"
+        description="Get personalized mentorship in full-stack development, React, Node.js, and cloud technologies from Siddhu Vydyabhushana. Book a session today."
+        keywords={[
+          "Siddhu Vydyabhushana mentor",
+          "Full stack mentorship",
+          "React mentoring",
+          "Software development mentor",
+          "Technical mentorship",
+          "Programming mentor"
+        ]}
+      />
       <Header />
       <RouteTransition>
         <div className={styles.container}>

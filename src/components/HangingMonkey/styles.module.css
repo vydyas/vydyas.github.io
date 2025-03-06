@@ -5,6 +5,7 @@
   z-index: 100;
   animation: swing 2s ease-in-out infinite;
   transform-origin: top center;
+  user-select: none;
 }
 
 .rope {

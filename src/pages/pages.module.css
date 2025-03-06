@@ -166,12 +166,16 @@
 }
 
 .projectDescription {
+  font-size: 0.9rem;
   color: var(--ifm-color-emphasis-700);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  flex: 1;
-  min-height: 4.8rem;
-  position: relative;
+  margin: 1rem 0;
+  line-height: 1.5;
+  /* Add these properties to handle text overflow */
+  min-height: 80px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .projectDescription::after {
@@ -938,4 +942,45 @@
   .experienceCard {
     padding: 1.5rem;
   }
-} 
+}
+
+/* Add mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .projectDescription {
+    min-height: auto;
+    max-height: none;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    font-size: 0.85rem;
+  }
+
+  .projectCard {
+    /* Adjust card size on mobile */
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .projectContent {
+    /* Add padding for better readability */
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Optional: Adjust the typing animation speed for mobile */
+@media screen and (max-width: 768px) {
+  .projectDescription span {
+    animation-duration: 1s !important; /* Make typing faster on mobile */
+  }
+}
+
+/* Add this to your existing styles */
+@media screen and (max-width: 768px) {
+  .experienceSection {
+    display: none;
+  }
+
+  /* Also hide the loading shimmer for experience on mobile */
+  .experienceSection .timelineContainer {
+    display: none;
+  }
+}

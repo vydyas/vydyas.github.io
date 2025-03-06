@@ -1,5 +1,5 @@
 export const chatbotData = {
-  name: "Siddhartha Varma",
+  name: "Siddhu Vydyabhushana",
   role: "Senior Software Engineer at Salesforce",
   skills: [
     "React", 

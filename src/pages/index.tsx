@@ -7,9 +7,9 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import styles from './index.module.css';
 import { ProfileShimmer, ExperienceShimmer } from '@site/src/components/LoadingShimmer';
-import ScrollButton from '../components/ScrollButton';
 import AIChatButton from '@site/src/components/AIChatButton';
 import DecodingText from '@site/src/components/DecodingText';
+import SEO from '../components/SEO';
 
 const socialLinks = [
   {
@@ -186,14 +186,14 @@ function MainSection() {
           >
             <ul className={styles.briefList}>
               <li>
-                Senior Software Engineer at <a href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>Salesforce</a>
+                Senior Software Engineer at <a href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>Salesforce</a>.
               </li>
               <li>
                 Building <a href="https://simpleresu.me" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>simpleresu.me</a>, 
                 an AI-powered resume builder
               </li>
               <li>
-                Mail me at <a href="mailto:vydyas@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>vydyas@gmail.com</a>
+                I currently live in Hyderabad, <b>India</b> 🇮🇳.
               </li>
             </ul>
           </motion.p>
@@ -283,18 +283,31 @@ const TimelineItem = ({ experience, index }) => {
 
 export default function Home(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-    return () => clearTimeout(timer);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   return (
     <Layout
       title="Frontend Developer Portfolio | Siddhu Vydyabhushana"
       description="Personal portfolio website showcasing my work and experience as a Frontend Developer">
+      <SEO />
       <Header />
       <RouteTransition>
         <main className={styles.main}>
@@ -303,43 +316,47 @@ export default function Home(): JSX.Element {
               <section className={styles.heroSection}>
                 <ProfileShimmer />
               </section>
-              <section className={styles.experienceSection}>
-                <div className={styles.timelineContainer}>
-                  {[1, 2, 3].map((i) => (
-                    <ExperienceShimmer key={i} />
-                  ))}
-                </div>
-              </section>
+              {!isMobile && (
+                <section className={styles.experienceSection}>
+                  <div className={styles.timelineContainer}>
+                    {[1, 2, 3].map((i) => (
+                      <ExperienceShimmer key={i} />
+                    ))}
+                  </div>
+                </section>
+              )}
             </>
           ) : (
-            <section className={styles.heroSection}>
-              <MainSection />
-            </section>
+            <>
+              <section className={styles.heroSection}>
+                <MainSection />
+              </section>
+              {!isMobile && (
+                <section className={styles.experienceSection}>
+                  <motion.h2 
+                    className={styles.sectionTitle}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    Work Experience
+                  </motion.h2>
+                  <div className={styles.timelineContainer}>
+                    {experiences.map((experience, index) => (
+                      <TimelineItem 
+                        key={index} 
+                        experience={experience} 
+                        index={index} 
+                      />
+                    ))}
+                  </div>
+                </section>
+              )}
+            </>
           )}
-          
-          <section className={styles.experienceSection}>
-            <motion.h2 
-              className={styles.sectionTitle}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Work Experience
-            </motion.h2>
-            <div className={styles.timelineContainer}>
-              {experiences.map((experience, index) => (
-                <TimelineItem 
-                  key={index} 
-                  experience={experience} 
-                  index={index} 
-                />
-              ))}
-            </div>
-          </section>
         </main>
       </RouteTransition>
-      <ScrollButton />
       <AIChatButton />
     </Layout>
   );
