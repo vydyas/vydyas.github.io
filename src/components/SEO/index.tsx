@@ -38,6 +38,9 @@ export default function SEO({
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={metaKeywords} />
       
+      {/* Google Site Verification */}
+      <meta name="google-site-verification" content="HjOa6niqGyhU60_dz9tIj_VyhCWwFc5D5ZcUR2aMdtY" />
+      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
