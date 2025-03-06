@@ -1,3 +1,8 @@
+
+<img width="1678" alt="Screenshot 2025-03-05 at 8 42 59 PM" src="https://github.com/user-attachments/assets/3bb1604c-3096-4261-889c-7cd8548c5d01" />
+<img width="1661" alt="Screenshot 2025-03-05 at 8 42 42 PM" src="https://github.com/user-attachments/assets/83fb8774-407b-4bde-8d57-f81c3a038976" />
+<img width="1661" alt="Screenshot 2025-03-05 at 8 42 32 PM" src="https://github.com/user-attachments/assets/6134b5bc-39b5-48b1-9224-1c4285fa4577" />
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
