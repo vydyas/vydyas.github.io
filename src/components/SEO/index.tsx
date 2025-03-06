@@ -25,7 +25,7 @@ export default function SEO({
     "Software Development",
     "Technical Mentor"
   ],
-  image = "/img/profile.jpg", // Add your profile image
+  image = "https://avatars.githubusercontent.com/u/2999586", // Add your profile image
   url = "https://vydyas.github.io", // Replace with your domain
 }: SEOProps) {
   const metaDescription = description;
