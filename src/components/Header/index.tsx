@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
 import styles from './styles.module.css';
 import DecodingText from '../DecodingText';
+import HangingMonkey from '../HangingMonkey';
 
 const socialLinks = [
   {
@@ -79,6 +80,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <HangingMonkey />
       <nav className={styles.headerNav}>
         
         <button 
