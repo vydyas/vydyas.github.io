@@ -55,7 +55,7 @@ const projects = [
     image: '/img/projects/json.png', // Will fallback to gradient if image doesn't exist
     tech: ['React', 'TypeScript'],
     githubUrl: 'https://github.com/vydyas/formatjson.io',
-    liveUrl: 'https://www.formatjson.io/',
+    liveUrl: 'https://formatjson-io.vercel.app/',
     featured: true
   },
 ];

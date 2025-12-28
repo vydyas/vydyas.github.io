@@ -4,10 +4,9 @@ import Layout from '@theme/Layout';
 import Header from '@site/src/components/Header';
 import RouteTransition from '@site/src/components/RouteTransition';
 import { TypeAnimation } from 'react-type-animation';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './index.module.css';
-import { ProfileShimmer, ExperienceShimmer } from '@site/src/components/LoadingShimmer';
-import AIChatButton from '@site/src/components/AIChatButton';
+import { ProfileShimmer } from '@site/src/components/LoadingShimmer';
 import DecodingText from '@site/src/components/DecodingText';
 import SEO from '../components/SEO';
 
@@ -41,57 +40,6 @@ const socialLinks = [
       </svg>
     ),
     className: styles.githubLink
-  }
-];
-
-const experiences = [
-  {
-    company: 'Salesforce',
-    favicon: 'https://www.salesforce.com/favicon.ico',
-    role: 'Senior Software Engineer',
-    period: 'Apr2021 - Present',
-    description: 'Senior Software Engineer working for Einstein Copilot',
-    achievements: [
-      'Building and maintaining Lightning Web Components framework',
-      'Improving component library performance and accessibility',
-      'Mentoring junior developers and conducting technical interviews'
-    ]
-  },
-  {
-    company: 'Pega',
-    favicon: 'https://www.pega.com/themes/custom/pega_bolt_theme/images/favicons/favicon.ico',
-    role: 'Senior Software Engineer',
-    period: 'Feb 2020 - Mar 2021',
-    description: 'Worked on pega cloud management interfaces',
-    achievements: [
-      'Took full ownership of the micro front-end architecture',
-      'Wrote extensive unit test cases and end-to-end test cases using Jasmine, Playwright, Jest, and Enzyme',
-      'Built a scalable React data table component that efficiently handles 100k rows without freezing'
-    ]
-  },
-  {
-    company: 'SS&C EZE Software',
-    favicon: 'https://www.ezesoft.com/hubfs/favicon-96x96.png',
-    role: 'Full Stack Javascript Developer',
-    period: 'Apr 2017 - Jan 2020',
-    description: 'Part of platform team, working on cloud management interfaces',
-    achievements: [
-      'Architected and developed microservices in Node.js and Python',
-      'Took ownership of pipeline setup to improve scaling during building and deployment',
-      'Worked with front-end technologies such as Angular, TypeScript, JavaScript ES6, HTML5, and CSS3. Developed back-end services using Node.js, Sequelize, and GraphQL',
-      'Wrote behavior-driven tests using Cucumber and set up build pipelines as part of the build process'
-    ]
-  },
-  {
-    company: 'Tata Consultancy Services',
-    favicon: 'https://www.tcs.com/etc.clientlibs/tcs/clientlibs/clientlib-site/resources/images/tcs_favicon_48.png',
-    role: 'Software Engineer',
-    period: 'Mar 2015 - Mar 2017',
-    description: 'Part of the Amazon Prime Video team, working on streaming platform UI.',
-    achievements: [
-      'Written RESTFUL web services using java Springs framework, setup and written end to end test with selenium I awarded star performer for my contrubution and innovation in work',
-      'I awarded star performer for my contrubution and innovation in work'
-    ]
   }
 ];
 
@@ -161,7 +109,7 @@ function MainSection() {
               {startTyping && (
                 <TypeAnimation
                   sequence={[
-                    'Senior Software Engineer',
+                    'Staff Engineer',
                     2000,
                     'Frontend Developer',
                     2000,
@@ -186,7 +134,7 @@ function MainSection() {
           >
             <ul className={styles.briefList}>
               <li>
-                Senior Software Engineer at <a href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>Salesforce</a>.
+                Staff Engineer at <a href="https://www.servicenow.com" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>ServiceNow</a>.
               </li>
               <li>
                 Building <a href="https://simpleresu.me" target="_blank" rel="noopener noreferrer" className={styles.salesforceLink}>simpleresu.me</a>, 
@@ -224,63 +172,6 @@ function MainSection() {
   );
 }
 
-const TimelineItem = ({ experience, index }) => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <motion.div 
-      ref={ref}
-      className={styles.timelineItem}
-      initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-      transition={{ duration: 0.8, delay: index * 0.2 }}
-    >
-      <div className={styles.timelineDot}>
-        <motion.div 
-          className={styles.dot}
-          initial={{ scale: 0 }}
-          animate={isInView ? { scale: 1 } : { scale: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-        />
-      </div>
-      <motion.div 
-        className={styles.timelineContent}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-        transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
-      >
-        <div className={styles.companyHeader}>
-          {experience.favicon && (
-            <img 
-              src={experience.favicon} 
-              alt={`${experience.company} logo`} 
-              className={styles.companyFavicon}
-              onError={(e) => e.currentTarget.style.display = 'none'}
-            />
-          )}
-          <h3 className={styles.companyName}>{experience.company}</h3>
-          <span className={styles.period}>{experience.period}</span>
-        </div>
-        <h4 className={styles.role}>{experience.role}</h4>
-        <p className={styles.description}>{experience.description}</p>
-        <ul className={styles.achievements}>
-          {experience.achievements.map((achievement, i) => (
-            <motion.li 
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.5, delay: index * 0.2 + 0.4 + (i * 0.1) }}
-            >
-              {achievement}
-            </motion.li>
-          ))}
-        </ul>
-      </motion.div>
-    </motion.div>
-  );
-};
-
 export default function Home(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
@@ -316,48 +207,16 @@ export default function Home(): JSX.Element {
               <section className={styles.heroSection}>
                 <ProfileShimmer />
               </section>
-              {!isMobile && (
-                <section className={styles.experienceSection}>
-                  <div className={styles.timelineContainer}>
-                    {[1, 2, 3].map((i) => (
-                      <ExperienceShimmer key={i} />
-                    ))}
-                  </div>
-                </section>
-              )}
             </>
           ) : (
             <>
               <section className={styles.heroSection}>
                 <MainSection />
               </section>
-              {!isMobile && (
-                <section className={styles.experienceSection}>
-                  <motion.h2 
-                    className={styles.sectionTitle}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    Work Experience
-                  </motion.h2>
-                  <div className={styles.timelineContainer}>
-                    {experiences.map((experience, index) => (
-                      <TimelineItem 
-                        key={index} 
-                        experience={experience} 
-                        index={index} 
-                      />
-                    ))}
-                  </div>
-                </section>
-              )}
             </>
           )}
         </main>
       </RouteTransition>
-      <AIChatButton />
     </Layout>
   );
 }

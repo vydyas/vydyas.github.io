@@ -1,0 +1,69 @@
+.islandContainer {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  transform: none;
+  z-index: 1000;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.island {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 10px 20px;
+  min-width: 180px;
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.island.expanded {
+  min-width: 300px;
+  padding: 15px 25px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.message {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .island {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .islandContainer {
+    bottom: 120px;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-width: 320px;
+    transform: none;
+  }
+
+  .island {
+    width: 100%;
+    min-width: unset;
+  }
+} 

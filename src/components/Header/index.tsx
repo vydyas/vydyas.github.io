@@ -4,6 +4,7 @@ import { useLocation } from '@docusaurus/router';
 import styles from './styles.module.css';
 import DecodingText from '../DecodingText';
 import HangingMonkey from '../HangingMonkey';
+import DynamicIsland from '../DynamicIsland';
 
 const socialLinks = [
   {
@@ -42,6 +43,9 @@ export default function Header() {
   const isHomePage = location.pathname === '/';
   const [copiedEmail, setCopiedEmail] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [islandMessage, setIslandMessage] = useState<string | null>(null);
+  const [showIsland, setShowIsland] = useState(false);
+  const hasShownWelcome = useRef(false);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -56,6 +60,18 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isHomePage && !hasShownWelcome.current && !localStorage.getItem('hasShownWelcome')) {
+      console.log('Showing welcome message');
+      setTimeout(() => {
+        setIslandMessage("Welcome to my portfolio!");
+        setShowIsland(true);
+        hasShownWelcome.current = true;
+        localStorage.setItem('hasShownWelcome', 'true');
+      }, 1500);
+    }
+  }, [isHomePage]);
+
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true;
     if (path !== '/' && location.pathname.startsWith(path)) return true;
@@ -65,21 +81,39 @@ export default function Header() {
   const navigation = [
     { title: 'Home', to: '/', emoji: '🏠' },
     { title: 'Projects', to: '/projects', emoji: '' },
-    { title: 'Mentorship', to: '/mentorship', emoji: '' },
+    { title: 'Experience', to: '/experience', emoji: '' },
     { title: 'Resume', to: 'https://www.simpleresu.me', emoji: '' }
   ];
+
+  const showNotification = (message: string, icon?: string) => {
+    setIslandMessage(message);
+    setShowIsland(true);
+  };
 
   const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const email = 'vydyas@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
       setCopiedEmail(true);
+      showNotification('Email copied to clipboard! 📋');
       setTimeout(() => setCopiedEmail(false), 2000);
     });
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      showNotification("Test notification!");
+    }, 2000);
+  }, []);
+
   return (
     <header className={styles.header}>
+      <DynamicIsland 
+        message={islandMessage || "Welcome to my portfolio!"}
+        isVisible={showIsland}
+        onClose={() => setShowIsland(false)}
+        icon="👋"
+      />
       <HangingMonkey />
       <nav className={styles.headerNav}>
         

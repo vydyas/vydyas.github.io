@@ -11,7 +11,7 @@ interface SEOProps {
 
 export default function SEO({
   title = "Siddhu Vydyabhushana - Full Stack Developer",
-  description = "Siddhu Vydyabhushana is a Full Stack Developer with expertise in React, Node.js, and Cloud Technologies. View my projects, read my blog posts, and learn about my mentorship program.",
+  description = "Siddhu Vydyabhushana is a Full Stack Developer with expertise in React, Node.js, and Cloud Technologies. View my projects and read my blog posts.",
   keywords = [
     "Siddhu Vydyabhushana",
     "Full Stack Developer",
@@ -22,8 +22,7 @@ export default function SEO({
     "JavaScript Developer",
     "TypeScript",
     "Cloud Technologies",
-    "Software Development",
-    "Technical Mentor"
+    "Software Development"
   ],
   image = "https://avatars.githubusercontent.com/u/2999586", // Add your profile image
   url = "https://vydyas.github.io", // Replace with your domain

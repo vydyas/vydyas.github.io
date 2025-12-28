@@ -7,65 +7,65 @@ import styles from './pages.module.css';
 
 const experiences = [
   {
+    company: 'ServiceNow',
+    favicon: 'https://www.servicenow.com/favicon.ico',
+    role: 'Staff Engineer',
+    period: 'Present',
+    description: 'Staff Engineer leading Agent Chat team and driving AI innovation',
+    achievements: [
+      'Agent Chat Ownership - Leading the development and strategy for Agent Chat platform',
+      'Adding AI features to Agent Chat - Integrating cutting-edge AI capabilities to enhance user experience',
+      'Managing 12 members of team - Leading and mentoring a team of talented engineers',
+      'ServiceNow is 20 years old company - Taking care of legacy code and managing customer investigations',
+      'Reviewing code and Architecting new solutions - Driving technical excellence through code reviews and system design'
+    ]
+  },
+  {
     company: 'Salesforce',
     favicon: 'https://www.salesforce.com/favicon.ico',
     role: 'Senior Software Engineer',
-    period: '2020 - Present',
-    description: 'Leading frontend development for the Lightning Design System team.',
+    period: 'Apr2021 - Present',
+    description: 'Senior Software Engineer working for Einstein Copilot',
     achievements: [
       'Building and maintaining Lightning Web Components framework',
       'Improving component library performance and accessibility',
-      'Mentoring junior developers and conducting technical interviews',
-      'Contributing to design system documentation and best practices'
+      'Mentoring junior developers and conducting technical interviews'
     ]
   },
   {
-    company: 'SimpleResume',
-    role: 'Founder & Developer',
-    period: '2023 - Present',
-    description: 'Building an AI-powered resume builder platform.',
+    company: 'Pega',
+    favicon: 'https://www.pega.com/themes/custom/pega_bolt_theme/images/favicons/favicon.ico',
+    role: 'Senior Software Engineer',
+    period: 'Feb 2020 - Mar 2021',
+    description: 'Worked on pega cloud management interfaces',
     achievements: [
-      'Developed the entire platform from scratch using Next.js and AI',
-      'Implemented real-time resume editing and preview',
-      'Created AI-powered content suggestions and formatting',
-      'Optimized performance and user experience'
+      'Took full ownership of the micro front-end architecture',
+      'Wrote extensive unit test cases and end-to-end test cases using Jasmine, Playwright, Jest, and Enzyme',
+      'Built a scalable React data table component that efficiently handles 100k rows without freezing'
     ]
   },
   {
-    company: 'Microsoft',
-    favicon: 'https://www.microsoft.com/favicon.ico',
-    role: 'Software Engineer II',
-    period: '2018 - 2020',
-    description: 'Worked on Azure Portal team, developing cloud management interfaces.',
+    company: 'SS&C EZE Software',
+    favicon: 'https://www.ezesoft.com/hubfs/favicon-96x96.png',
+    role: 'Full Stack Javascript Developer',
+    period: 'Apr 2017 - Jan 2020',
+    description: 'Part of platform team, working on cloud management interfaces',
     achievements: [
-      'Developed real-time monitoring dashboard used by 100k+ users',
-      'Reduced page load time by 60% through code optimization',
-      'Implemented automated testing reducing bugs by 45%',
-      'Collaborated with UX team for accessibility improvements'
+      'Architected and developed microservices in Node.js and Python',
+      'Took ownership of pipeline setup to improve scaling during building and deployment',
+      'Worked with front-end technologies such as Angular, TypeScript, JavaScript ES6, HTML5, and CSS3. Developed back-end services using Node.js, Sequelize, and GraphQL',
+      'Wrote behavior-driven tests using Cucumber and set up build pipelines as part of the build process'
     ]
   },
   {
-    company: 'Amazon',
-    role: 'Frontend Developer',
-    period: '2016 - 2018',
+    company: 'Tata Consultancy Services',
+    favicon: 'https://www.tcs.com/etc.clientlibs/tcs/clientlibs/clientlib-site/resources/images/tcs_favicon_48.png',
+    role: 'Software Engineer',
+    period: 'Mar 2015 - Mar 2017',
     description: 'Part of the Amazon Prime Video team, working on streaming platform UI.',
     achievements: [
-      'Built new video player controls increasing user engagement by 25%',
-      'Implemented responsive design for multiple devices',
-      'Created reusable component library used across teams',
-      'Optimized video loading performance reducing buffer time'
-    ]
-  },
-  {
-    company: 'Google',
-    role: 'Software Engineer Intern',
-    period: '2015 - 2016',
-    description: 'Internship with the Chrome DevTools team.',
-    achievements: [
-      'Developed new debugging features for Chrome DevTools',
-      'Created documentation for new API implementations',
-      'Contributed to open source projects in Chrome ecosystem',
-      'Received full-time offer after successful internship'
+      'Written RESTFUL web services using java Springs framework, setup and written end to end test with selenium I awarded star performer for my contrubution and innovation in work',
+      'I awarded star performer for my contrubution and innovation in work'
     ]
   }
 ];
@@ -180,6 +180,14 @@ export default function Experience(): JSX.Element {
       <Header />
       <RouteTransition>
         <main className={styles.mainContainer}>
+          <motion.h1 
+            className={styles.pageTitle}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Work Experience
+          </motion.h1>
           <motion.div 
             className={styles.timelineContainer}
             variants={container}
